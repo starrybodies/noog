@@ -45,8 +45,8 @@ Original 0.9.0 ZIP remains unchanged:
 `d89428ddaec4663e6f1a4997d7b8f6956d25fcd9b56576e34969d26f87d6e819`.
 
 Current upload ZIP: `releases/NOOG-Chrome-Web-Store-0.10.0.zip`.
-SHA-256: `57342e4bc50670e00760683bbb3f25a0c5b224e5ce724fe24ba1102605c751fd`.
+SHA-256: `76b7d1324c5d2f74c93356a393ecd10f8b50a6832cfc1fdb358583da9c8e8a32`.
 
 ## Remaining publication work
 
-Google's publisher dashboard still requires the user's trader/non-trader declaration; the agent did not choose or submit that legal status. Store submission also needs final listing assets and dashboard fields. Publication is subject to Google's review; no live listing is claimed.
+The user completed the publisher non-trader declaration. Store submission still needs dashboard listing/privacy fields and final upload. A 1280×800 screenshot of real filtering on a labeled synthetic demo page is included in docs/verification/0.10.0-filtering.png; the controls capture is supplemental evidence. Publication is subject to Google's review; no live listing is claimed.

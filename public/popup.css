@@ -137,12 +137,12 @@ h2 {
   outline-offset: 3px;
 }
 .replacement-choices,
-.segmented {
+.segments {
   display: flex;
   gap: 6px;
 }
 .replacement-choices button,
-.segmented button {
+.segments button {
   flex: 1;
   border: 1px solid #44503d;
   border-radius: 9px;
@@ -157,7 +157,7 @@ h2 {
   gap: 6px;
 }
 .replacement-choices button.selected,
-.segmented button.selected {
+.segments button.selected {
   background: #cdf66b;
   color: #182210;
   border-color: #cdf66b;

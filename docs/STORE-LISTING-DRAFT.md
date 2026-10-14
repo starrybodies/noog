@@ -53,4 +53,4 @@ Executable JavaScript, WASM and model weights are packaged. No remotely hosted e
 
 ## Remaining publisher decisions
 
-Complete publisher trader/non-trader declaration using the user's legal facts. Review dashboard privacy-category wording against actual local page processing and cookie-free image fetching. Select mature-content designation accurately without including explicit material in listing assets. Capture final product screenshots and verify all public links after pushing the release.
+The user completed the non-trader declaration. Review dashboard privacy-category wording against actual local page processing and cookie-free image fetching. Select mature-content designation accurately without including explicit material in listing assets. Use docs/verification/0.10.0-filtering.png (1280×800) as the store screenshot. The narrow controls capture is supplemental evidence. Verify all public links.
