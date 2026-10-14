@@ -190,7 +190,7 @@ try {
     "block",
   );
   await feed.reload();
-  await feed.locator("#promotion").scrollIntoViewIfNeeded();
+  await feed.evaluate(() => window.scrollTo(0, 0));
   await new Promise((resolve) => setTimeout(resolve, 500));
   await feed
     .locator(".noog-swap")
@@ -201,7 +201,7 @@ try {
       getComputedStyle(document.querySelector("#promotion")).display !== "none",
   );
   await feed.reload();
-  await feed.locator("#promotion").scrollIntoViewIfNeeded();
+  await feed.evaluate(() => window.scrollTo(0, 0));
   await new Promise((resolve) => setTimeout(resolve, 500));
   assert.equal(
     await feed.locator(".noog-swap").count(),

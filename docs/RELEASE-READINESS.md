@@ -45,7 +45,7 @@ Original 0.9.0 ZIP remains unchanged:
 `d89428ddaec4663e6f1a4997d7b8f6956d25fcd9b56576e34969d26f87d6e819`.
 
 Current upload ZIP: `releases/NOOG-Chrome-Web-Store-0.10.0.zip`.
-SHA-256: `76b7d1324c5d2f74c93356a393ecd10f8b50a6832cfc1fdb358583da9c8e8a32`.
+SHA-256: `954c41b83a0eca62d0891df0c1bc7df41b064b016ad3641c8475ffd3c2eaa0f1`.
 
 ## Remaining publication work
 

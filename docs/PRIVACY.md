@@ -25,8 +25,12 @@ Preferences, custom keywords, domain pauses and creator exceptions stay in Chrom
 - Offscreen: run local classification in a worker.
 - Active tab: show page status and pause the current site from the toolbar.
 
-NOOG does not collect browsing history, credentials, payment information or analytics.
+NOOG uses current page and image addresses locally for filtering and privacy exclusions. It does not keep a browsing-history log, access credentials or payment information, or collect analytics.
 
 ## Limits and support
 
 NOOG is experimental. It can miss unwanted material or cover ordinary content. Strict modes are optional and swaps remain reversible. Report problems through [GitHub issues](https://github.com/starrybodies/noog/issues); avoid including private content in public reports.
+
+## Limited Use
+
+NOOG's use of information received from Chrome APIs adheres to the [Chrome Web Store User Data Policy](https://developer.chrome.com/docs/webstore/program-policies/user-data), including its Limited Use requirements. Page content, addresses and creator identifiers are used only for the disclosed filtering, privacy exclusions and user controls. This data is not sold, used for advertising, transferred for unrelated purposes, or used to determine creditworthiness. NOOG receives no feed content for human review.
