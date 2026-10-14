@@ -21,6 +21,7 @@ The intended public launch is free. The baseline still contains optional TypeSaf
 | `releases/0.9.0-provenance.json` | Package digest and verification record |
 | `docs/RELEASE-READINESS.md` | Observed release blocker and remaining launch work |
 | `docs/STORE-LISTING-DRAFT.md` | Draft listing and permission explanations for final-package review |
+| `docs/INSTALL-AND-USE-RECOMMENDATION.md` | Research comparing model deployment options for a free launch without user API keys |
 
 ## Try the baseline
 
