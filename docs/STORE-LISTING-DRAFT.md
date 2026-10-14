@@ -53,4 +53,4 @@ Executable JavaScript, WASM and model weights are packaged. No remotely hosted e
 
 ## Remaining publisher decisions
 
-The user completed the non-trader declaration. Review dashboard privacy-category wording against actual local page processing and cookie-free image fetching. Select mature-content designation accurately without including explicit material in listing assets. Use docs/verification/0.10.0-filtering.png (1280×800) as the store screenshot. The narrow controls capture is supplemental evidence. Verify all public links.
+The user completed the non-trader declaration. Review dashboard privacy-category wording against actual local page processing and cookie-free image fetching. Select mature-content designation accurately without including explicit material in listing assets. Use docs/verification/0.10.0-filtering.png (1280×800) as the store screenshot. The narrow controls capture is supplemental evidence. Use docs/store/small-promo-440x280.png for the required small promotional tile and public/assets/icon128.png for the store icon. Verify all public links.
