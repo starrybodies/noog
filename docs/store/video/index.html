@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NOOG — Reverse the Goon. Watch the 30-second teaser for the free Chrome extension.">
+  <title>NOOG — Reverse the Goon</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #141514; color: #f1f4e9; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 1000px; margin: auto; padding: 48px 24px; }
+    .film { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 320px); align-items: center; gap: 56px; }
+    .eyebrow { color: #c4f265; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 20px 0; font-size: clamp(42px, 6vw, 72px); line-height: 1; letter-spacing: -.045em; }
+    p { line-height: 1.65; }
+    a { color: #c4f265; text-underline-offset: 4px; }
+    a:focus-visible, video:focus-visible { outline: 3px solid #c4f265; outline-offset: 6px; }
+    video { display: block; width: 100%; aspect-ratio: 9 / 16; border: 1px solid #363c30; border-radius: 18px; background: #141514; }
+    figure { margin: 0; }
+    figcaption { margin-top: 12px; color: #c1c7b8; font-size: 12px; }
+    .status { margin-top: 28px; padding-left: 16px; border-left: 2px solid #c4f265; color: #c1c7b8; }
+    .credits { margin-top: 40px; border-top: 1px solid #363c30; padding-top: 20px; font-size: 12px; color: #c1c7b8; }
+    details { margin: 12px 0; }
+    summary { cursor: pointer; }
+    @media (max-width: 680px) { main { padding: 32px 20px; } .film { grid-template-columns: 1fr; gap: 28px; } figure { width: min(100%, 320px); margin: auto; } }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="film" aria-labelledby="film-title">
+      <div>
+        <p class="eyebrow">Symbai Studios · Free Chrome extension</p>
+        <h1 id="film-title">Your attention.<br>Your rules.</h1>
+        <p>NOOG. Reverse the Goon.<br>Less bait. More choice. Watch the 30-second film.</p>
+        <p class="status">NOOG 0.10.0 is submitted for Chrome Web Store review. Store installation is coming after approval.</p>
+        <p><a href="https://noog.symbai.studio/">Explore NOOG</a> · <a href="NOOG-Launch-Teaser.mp4" download>Download video</a></p>
+      </div>
+      <figure>
+        <video controls playsinline preload="metadata" poster="poster.jpg" aria-label="NOOG — Reverse the Goon, 30-second launch teaser">
+          <source src="NOOG-Launch-Teaser.mp4" type="video/mp4">
+          <track kind="captions" src="captions.vtt" srclang="en" label="English">
+          <a href="NOOG-Launch-Teaser.mp4">Download the NOOG video</a>.
+        </video>
+        <figcaption>Actual NOOG 0.10.0 demo on a staged public page, shown at 1.25× speed. Cinematic scenes and narration are AI generated.</figcaption>
+      </figure>
+    </section>
+    <footer class="credits">
+      <p>'Catalyst' by <a href="https://www.scottbuckley.com.au/library/catalyst/">Scott Buckley</a> — released under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. www.scottbuckley.com.au. Edited excerpt with fades and voice ducking.</p>
+      <details>
+        <summary>Photo credit and transcript</summary>
+        <p>Cat photo: PantheraLeo1359531, <a href="https://commons.wikimedia.org/wiki/File:Sitzende_graue_Mieze_20201026_DSC5103.jpg">Sitzende graue Mieze 20201026 DSC5103.jpg</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; cropped and resized. No endorsement implied.</p>
+        <p>Your attention belongs to you. Take it back. Meet NOOG. Less bait. More choice. On your device. NOOG. Reverse the goon.</p>
+      </details>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,23 @@
+NOOG — Reverse the Goon. Your attention. Your rules.
+
+A free experimental Chrome extension that covers unwanted images and promotional posts with cats, nature, wisdom or quiet cards. Bundled on-device image checks and local caption rules. No account, API key or separate AI installation required.
+
+NOOG is pronounced Nuu-g, with a hard g.
+
+Version 0.10.0 was submitted for Chrome Web Store review on October 14, 2026. Store installation is coming after approval. Detection and website coverage are imperfect; swaps are reversible. Known private apps, supported private-message routes, forms and editors are excluded. Pause unfamiliar private sites in the toolbar.
+
+Website: https://noog.symbai.studio/
+Source and support: https://github.com/starrybodies/noog
+Privacy: https://github.com/starrybodies/noog/blob/main/docs/PRIVACY.md
+Publisher: Symbai Studios
+
+The demonstration shows the actual NOOG 0.10.0 extension on a staged public page at 1.25x speed. The match uses a local caption rule; it is not an image-classification accuracy test. Cinematic scenes and narration are AI generated.
+
+'Catalyst' by Scott Buckley - released under CC-BY 4.0. www.scottbuckley.com.au
+Music: https://www.scottbuckley.com.au/library/catalyst/
+License: https://creativecommons.org/licenses/by/4.0/
+Edited excerpt with fades and voice ducking.
+
+Cat photo: PantheraLeo1359531, "Sitzende graue Mieze 20201026 DSC5103.jpg", CC BY 4.0; cropped and resized within the NOOG cover. No endorsement implied.
+Photo: https://commons.wikimedia.org/wiki/File:Sitzende_graue_Mieze_20201026_DSC5103.jpg
+License: https://creativecommons.org/licenses/by/4.0/

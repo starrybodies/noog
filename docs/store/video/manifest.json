@@ -1,0 +1,39 @@
+{
+  "title": "NOOG \u2014 Reverse the Goon",
+  "publisher": "Symbai Studios",
+  "version_shown": "0.10.0",
+  "duration_seconds": 30,
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "frames_per_second": 30,
+  "pronunciation": "Nuu-g; /nu\u02d0\u0261/; hard g",
+  "end_card": "Coming soon. Submitted for Chrome Web Store review.",
+  "files": {
+    "NOOG-Video-Credits.md": {
+      "bytes": 1929,
+      "sha256": "5f08958cf8a0b40abc01ea7e2e4071ab86375d671c7d8dc2d1f330d348416c0f"
+    },
+    "captions.vtt": {
+      "bytes": 359,
+      "sha256": "b79fbb1c0e32aaae9f7ccf0efdacd0d7ebd221c122b7e4dbf5a30cd8aaa60735"
+    },
+    "youtube-description.txt": {
+      "bytes": 1627,
+      "sha256": "ca6d7edf3cae4e822e687f2eb9cb0bf2dcd937cac285dd506d75df2b509a7e85"
+    },
+    "index.html": {
+      "bytes": 3755,
+      "sha256": "22b5d4d8747d914c885743a28a52534e316225914b5884523040ca62dc7e5d26"
+    },
+    "poster.jpg": {
+      "bytes": 36444,
+      "sha256": "f10c35a5ff009f438a9ebd3a592ba7e739be44b80b419f271a428155b95bc428"
+    },
+    "NOOG-Launch-Teaser.mp4": {
+      "bytes": 14102850,
+      "sha256": "9b58a467021a112c75e989ed749c643a7e4003d98ba68d10a046ca7ee9e03d83"
+    }
+  }
+}
