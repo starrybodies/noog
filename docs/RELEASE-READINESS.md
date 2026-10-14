@@ -1,54 +1,52 @@
-# NOOG release readiness
+# NOOG 0.10.0 release readiness
 
-Date: October 14, 2026
+October 14, 2026 · Implementation verified; Chrome Web Store submission pending publisher setup.
 
-Status: **Not submitted to the Chrome Web Store. The installed local-model setup check fails.**
+## Implemented
 
-## Observed results
+- Automatic filtering on accessible top-level HTTP(S) pages, with private-page, local/intranet, form and editor exclusions before analysis.
+- Bundled MobileNetV2 image inference with TensorFlow WASM; local caption rules. No account, API key, remote inference, Plus, billing, scheduling or per-site activation flow.
+- Reversible covers, persistent kept-post fingerprints, site/global pause and validated settings backup.
+- Actual model readiness and actionable failure status; current onboarding and privacy disclosures.
+- Recovered editable application modules, pinned dependencies, build, lockfile, CI and deterministic upload ZIP. Original Sites source was inaccessible; this is reconstructed source from the distribution, not an original project export.
 
-- Manifest V3, version 0.9.0, minimum Chrome 116.
-- The ZIP has `manifest.json` at its root and contains 114 files.
-- Every unpacked file matches the original archive byte for byte.
-- Manifest-referenced entry scripts, popup and icons exist.
-- All seven JavaScript entry bundles pass syntax checks.
-- Local WASM binaries, replacement images and license notices are included. Attribution validity has not been independently audited.
-- The public privacy page responds at https://noog.symbai.studio/privacy.html.
-- Installed Chrome reports version 0.9.0.
-- Website access passes the setup check.
-- The local-image-model setup check fails twice, including after a fresh extension reload and fresh setup page.
+## Failure diagnosis
 
-The UI reports:
+The original 0.9.0 setup check returned `image_worker_failed` in an isolated Chromium profile. Direct worker diagnostics showed threaded WASM blob scripts failing `importScripts` under the release security policy. Disabling threaded WASM in a temporary diagnostic copy made the same bundled model succeed. The production worker now explicitly selects non-threaded WASM without relaxing the policy or introducing CPU/remote fallback.
 
-> The local model could not complete a check. Reload NOOG in Chrome’s extensions page and retry.
+## Verification
 
-The existing settings also report that NOOG and/or pornographic-image filtering needs enabling. The documented setup check exercises the model independently without changing those choices. The underlying failure is hidden by the current generic UI and has not been established.
+Seven unit tests pass. Four browser suites pass using clean profiles and the actual generated extension:
 
-No real-feed accuracy, video behavior, private-page exclusions, settings import/export or live optional TypeSafe request was verified during this pass. Syntax and package integrity checks do not prove browser behavior or security.
+- Fresh-install model execution, general-page filtering, benign image preservation, cookie/referrer-free retrieval, private routes, forms/editors, dynamic card editability, SPA transitions, reveal, saved correction and pause.
+- Missing WASM files produce an honest unavailable status; no remote fallback. Caption filtering and reveal still work.
+- Pause during slow DOM startup is respected. Four competing pages eventually receive image checks after queue pressure, including a placeholder followed by a real image.
+- Private navigation cancels pending and subsequent image retrieval, including navigation while model startup waits on storage.
+- Independent per-key startup reconciliation test prevents a correction event from discarding a refreshed pause setting.
 
-## Source provenance
+Independent adversarial review reproduced five defects plus cancellation/queue/reconciliation edge cases. All confirmed findings were fixed and rechecked; final verdict: ready to merge, no confirmed unresolved findings.
 
-The initial GitHub commit preserves a built distribution, not the original editable application source. The earlier development chat, **Develop NOOG Product**, identifies a Sites project and a separate 0.9.0 launch kit. The current desktop Sites connection cannot access that project. The launch-kit download attempt timed out.
+## Limited performance and benign-image evidence
 
-The next source-recovery step is to export the original project from its owning Sites account and commit its source, build configuration, lockfile and existing tests into this repository. Preserve the original 0.9.0 archive as a provenance record.
+macOS ARM64 · test Chromium 145.0.7632.6 · 24 bundled, licensed photos: 12 cats and 12 nature scenes.
 
-## Launch scope
+- Cold inference: 277 ms.
+- Warm p50: 28 ms; p95: 31 ms.
+- False covers: 0/24 using default sensitivity.
+- Retained TensorFlow tensor bytes: 10,477,848 throughout evaluation.
 
-The user authorized the quickest reliable **free extension** launch. Plus can return in a future edition. The baseline still contains Plus and optional TypeSafe caption sharing; those features have not been removed in this first commit.
+The memory figure counts tensors, not total browser/worker RAM. This small dataset does not establish human-content classification accuracy, recall, live-site compatibility or performance on other hardware. Raw fixture results: `docs/verification/0.10.0-model-evaluation.json`.
 
-## Remaining release gates
+`npm audit` reports four moderate transitive warnings arising from TensorFlow's CLI argument formatting dependency. Build metadata confirms neither `argparse` nor `sprintf-js` is included in the shipped browser bundles. No safe patch is available from the package's currently published versions; downgrading TensorFlow would not be an appropriate fix.
 
-1. Recover the editable source and original build/test tooling.
-2. Trace and fix the demonstrated local-model setup failure. Verify the original symptom and add an appropriate regression check.
-3. Remove unfinished Plus controls and unnecessary paid-feature permissions from the free release. Align welcome text, documentation and privacy disclosures with the final behavior.
-4. Rebuild and verify the final package in installed Chrome. Check fresh install, local model execution, matched content, pause/show-once, private-page exclusions and settings backup/import. Verify expected external requests and retained optional integrations.
-5. Capture authentic final-extension screenshots and prepare store assets.
-6. Complete accurate listing, single-purpose, permission and privacy fields with free/public distribution.
-7. Finish publisher setup. Developer registration completed during this pass; the dashboard then requested the user's trader/non-trader declaration. The agent did not make that declaration.
-8. Submit for Chrome Web Store review and verify the result. Submission does not mean approval or a live listing.
+## Package provenance
 
-## Official references
+Original 0.9.0 ZIP remains unchanged:
+`d89428ddaec4663e6f1a4997d7b8f6956d25fcd9b56576e34969d26f87d6e819`.
 
-- [Publish an extension](https://developer.chrome.com/docs/webstore/publish)
-- [Listing information](https://developer.chrome.com/docs/webstore/cws-dashboard-listing)
-- [Privacy practices](https://developer.chrome.com/docs/webstore/cws-dashboard-privacy)
-- [Program policies](https://developer.chrome.com/docs/webstore/program-policies/policies)
+Current upload ZIP: `releases/NOOG-Chrome-Web-Store-0.10.0.zip`.
+SHA-256: `57342e4bc50670e00760683bbb3f25a0c5b224e5ce724fe24ba1102605c751fd`.
+
+## Remaining publication work
+
+Google's publisher dashboard still requires the user's trader/non-trader declaration; the agent did not choose or submit that legal status. Store submission also needs final listing assets and dashboard fields. Publication is subject to Google's review; no live listing is claimed.

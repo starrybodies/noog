@@ -1,62 +1,56 @@
-# NOOG store listing draft
+# NOOG 0.10.0 store listing
 
-This draft describes the intended free release. Verify every statement against the rebuilt final package before submission. No Chrome Web Store listing has been created or submitted.
-
-## Product details
+Publication status: not submitted. This text describes the rebuilt free extension.
 
 **Title:** NOOG — Reverse the goon
 
 **Short description:** Filter unwanted images, gambling promotions and custom triggers. Local image checks. Your feed, your choice.
 
-**Language:** English
+**Language:** English · **Category:** Productivity · **Distribution:** Free, public
 
-**Category:** Productivity
+**Homepage:** https://github.com/starrybodies/noog
 
-**Distribution:** Free, public
+**Privacy policy:** https://github.com/starrybodies/noog/blob/main/docs/PRIVACY.md
 
-**Homepage:** https://noog.symbai.studio/
-
-**Privacy policy:** https://noog.symbai.studio/privacy.html
+**Support:** https://github.com/starrybodies/noog/issues
 
 ## Detailed description
 
-NOOG helps you choose what gets through your feed. Cover unwanted images and promotional posts, then replace them with cats, nature, wisdom or quiet cards.
+NOOG helps you choose what gets through. Cover unwanted images and promotional posts, then replace them with cats, nature, wisdom or quiet cards.
 
-Choose the filters that matter to you:
+Install and start: pornographic-image checks and gambling-promotion rules are enabled automatically on accessible websites. No account, API key or separate AI installation is required.
 
-- Pornographic-image checks performed on your device.
+Choose your filters:
+
+- Pornographic-image estimates performed on your device.
 - Gambling-promotion caption rules.
-- Optional rage-bait and get-rich-quick promotional caption rules.
-- Your own keywords, phrases and covered sites.
-- Creator exceptions and local corrections for posts you want to keep.
+- Optional rage-bait and get-rich-quick promotional phrase rules.
+- Your own keywords and covered sites.
+- Creator exceptions and locally saved corrections for posts you want to keep.
 
-You stay in control. Show an item once, pause a site, or pause NOOG. Local image matches cover the matched media slot while preserving the surrounding post. Caption matches may replace a whole supported card.
+Swaps stay reversible. Show an item once, keep a post, pause a site or pause NOOG. Image matches cover the matched media slot while preserving the surrounding post. Caption matches can cover a whole supported card.
 
-NOOG supports X by default. Enable other websites through its toolbar controls and Chrome's permission prompts. Supported layouts include browser-based Instagram, Reddit, YouTube and generic cards and images. Website compatibility is best effort.
+Known private apps, supported private-message routes, forms and editable content are skipped. Embedded frames and Chrome's protected pages are outside automatic coverage. Layout compatibility is best effort.
 
-Images and readable sampled video frames are checked locally. NOOG does not upload images to an AI service. Settings stay in Chrome's local extension storage. The extension does not send usage analytics or keep a browsing-history log.
+Images and readable sampled video frames are checked locally. NOOG does not upload content to an AI provider. Public image hosts may receive cookie-free image retrieval requests. Preferences stay in Chrome's local extension storage. No analytics or browsing-history log is collected.
 
-Important limitations: NOOG is experimental. It can miss unwanted content or cover wanted images. Some media may appear before a check completes, and protected or cross-origin video may be unreadable. Unchecked media remains visible by default. Strict covers are optional on supported public feeds. NOOG is not a network firewall and does not guarantee complete blocking.
+NOOG is experimental. It can miss unwanted content or cover wanted images. Media may appear before a check finishes; protected streams and some layouts may be unreadable. Unchecked media stays visible by default. Optional strict covers apply only to supported public feeds. Video sampling can miss content between frames. NOOG does not guarantee complete blocking.
 
-Desktop Chrome only. Core filtering is free; no payment or developer account is needed.
+Desktop Chrome only. Free core filtering.
 
 ## Single purpose
 
 Help users reduce exposure to self-selected unwanted web content by locally detecting and reversibly covering matched images, promotional captions, keywords and websites.
 
-## Permission explanations for review
+## Permission explanations
 
-- **storage:** Save the user's local filter settings, site preferences, creator exceptions and post corrections. Verify the final release's exact stored data before submission.
-- **offscreen:** Run the bundled image-classification worker using browser APIs unavailable to the background service worker.
-- **scripting:** Activate the bundled content script on websites the user explicitly enables.
-- **activeTab:** Read the current tab's origin after the user opens NOOG's toolbar so site access and site controls can be offered.
-- **X/Twitter and X image CDN hosts:** Apply the supported X feed adapter and inspect permitted public images locally. Additional image downloads omit cookies and referrers.
-- **Optional HTTP(S) host access:** Filter other websites and inspect images hosted on separate CDN origins only after Chrome grants the user's requested access.
+- **storage:** Save local filter settings, custom terms, paused sites, creator exceptions and kept-post fingerprints; temporary model-readiness metrics contain no page content.
+- **offscreen:** Run the bundled local image model in a worker using APIs unavailable to the background service worker.
+- **activeTab:** Identify and control the current page after the user opens the toolbar.
+- **HTTP(S) host access:** Apply filtering automatically on accessible pages and fetch displayed public images from separate image hosts for local checks. Private exclusions run before analysis; retrieval omits cookies/referrers and rejects redirects.
 
-If optional TypeSafe caption sharing is retained, disclose it in the listing and privacy fields and justify its host permission. If removed, remove its code, consent controls and permission. Do not claim that all accessed content always stays local while caption sharing remains available.
+Executable JavaScript, WASM and model weights are packaged. No remotely hosted executable code, caption API, billing endpoint or telemetry endpoint is used.
 
-If Plus is removed, remove the alarms permission and revise the published privacy page to distinguish historical/website billing from the actual free extension's data practices. Do not provide an alarms justification for a release that has no scheduling feature.
+## Remaining publisher decisions
 
-## Fields still requiring final-package review
-
-Data categories, remote-code declaration, permission list, support URL, screenshot assets and mature-content designation must be based on the final package and publisher facts. Do not select "no data collection" solely because most processing is local while optional caption sharing or billing activation remains present.
+Complete publisher trader/non-trader declaration using the user's legal facts. Review dashboard privacy-category wording against actual local page processing and cookie-free image fetching. Select mature-content designation accurately without including explicit material in listing assets. Capture final product screenshots and verify all public links after pushing the release.

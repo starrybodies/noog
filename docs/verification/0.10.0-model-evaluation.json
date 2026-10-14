@@ -1,0 +1,376 @@
+{
+  "date": "2026-10-14T14:49:43.143Z",
+  "platform": "darwin",
+  "arch": "arm64",
+  "chrome": "145.0.7632.6",
+  "dataset": "12 licensed cat and 12 licensed nature photos bundled with NOOG; no human/explicit-image accuracy evaluation",
+  "samples": 24,
+  "falseCovers": 0,
+  "coldMs": 277,
+  "warmP50Ms": 28,
+  "warmP95Ms": 31,
+  "tensorBytesMin": 10477848,
+  "tensorBytesMax": 10477848,
+  "results": [
+    {
+      "file": "assets/library/commons-217417.webp",
+      "id": 1,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9960340857505798,
+        "Porn": 0.0025566795375198126,
+        "Drawing": 0.0007378318114206195,
+        "Sexy": 0.0005013819318264723,
+        "Hentai": 0.00016996562771964818
+      },
+      "elapsedMs": 277,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-9437797.webp",
+      "id": 2,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9998588562011719,
+        "Drawing": 0.00012947242066729814,
+        "Porn": 0.000006382143055816414,
+        "Hentai": 0.0000038142097764648497,
+        "Sexy": 0.0000014761249076400418
+      },
+      "elapsedMs": 28,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-11010144.webp",
+      "id": 3,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9993001222610474,
+        "Drawing": 0.00045050401240587234,
+        "Porn": 0.00017291089170612395,
+        "Hentai": 0.00004136170900892466,
+        "Sexy": 0.00003496666613500565
+      },
+      "elapsedMs": 31,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-12127693.webp",
+      "id": 4,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9991536140441895,
+        "Drawing": 0.0003331884217914194,
+        "Porn": 0.00027256226167082787,
+        "Sexy": 0.00018290385196451098,
+        "Hentai": 0.0000577124155825004
+      },
+      "elapsedMs": 28,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-18523021.webp",
+      "id": 5,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9664469957351685,
+        "Porn": 0.024750985205173492,
+        "Sexy": 0.008214465342462063,
+        "Drawing": 0.000411888409871608,
+        "Hentai": 0.00017576731625013053
+      },
+      "elapsedMs": 29,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-45267619.webp",
+      "id": 6,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9739012718200684,
+        "Porn": 0.024836253374814987,
+        "Sexy": 0.0005532734794542193,
+        "Drawing": 0.00037393326056189835,
+        "Hentai": 0.0003351879131514579
+      },
+      "elapsedMs": 27,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-39351426.webp",
+      "id": 7,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9999728202819824,
+        "Drawing": 0.00001896372668852564,
+        "Porn": 0.0000067461437538440805,
+        "Hentai": 9.934140052791918e-7,
+        "Sexy": 4.6732091618650884e-7
+      },
+      "elapsedMs": 29,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-87286420.webp",
+      "id": 8,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9688920378684998,
+        "Porn": 0.023799294605851173,
+        "Sexy": 0.006420660763978958,
+        "Drawing": 0.0005843004328198731,
+        "Hentai": 0.00030362611869350076
+      },
+      "elapsedMs": 30,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-93039300.webp",
+      "id": 9,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9750249981880188,
+        "Porn": 0.013958504423499107,
+        "Sexy": 0.008247897028923035,
+        "Drawing": 0.002276524668559432,
+        "Hentai": 0.0004919866332784295
+      },
+      "elapsedMs": 29,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-95494176.webp",
+      "id": 10,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.5110146999359131,
+        "Porn": 0.31389120221138,
+        "Sexy": 0.17200137674808502,
+        "Hentai": 0.0022651497274637222,
+        "Drawing": 0.0008275255677290261
+      },
+      "elapsedMs": 29,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-97121195.webp",
+      "id": 11,
+      "ok": true,
+      "scores": {
+        "Sexy": 0.5447230935096741,
+        "Neutral": 0.33969730138778687,
+        "Porn": 0.1152786910533905,
+        "Hentai": 0.0001910532737383619,
+        "Drawing": 0.00010982644744217396
+      },
+      "elapsedMs": 30,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-97121200.webp",
+      "id": 12,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.8570629358291626,
+        "Porn": 0.10115435719490051,
+        "Sexy": 0.04095783084630966,
+        "Hentai": 0.0004523828683886677,
+        "Drawing": 0.0003725500137079507
+      },
+      "elapsedMs": 28,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-2799667.webp",
+      "id": 13,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9948781728744507,
+        "Drawing": 0.005059457384049892,
+        "Sexy": 0.00003526682485244237,
+        "Hentai": 0.000014981342246755958,
+        "Porn": 0.000012180104931758251
+      },
+      "elapsedMs": 28,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-7445320.webp",
+      "id": 14,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9994820952415466,
+        "Drawing": 0.0004827566153835505,
+        "Porn": 0.000020660676455008797,
+        "Hentai": 0.000009445544492336921,
+        "Sexy": 0.000005001887075195555
+      },
+      "elapsedMs": 24,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-7520233.webp",
+      "id": 15,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9998584985733032,
+        "Drawing": 0.00013821566244587302,
+        "Hentai": 0.0000023765630885463906,
+        "Porn": 7.824593240002287e-7,
+        "Sexy": 4.247102225463095e-8
+      },
+      "elapsedMs": 25,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-9058435.webp",
+      "id": 16,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.8318575024604797,
+        "Drawing": 0.14828190207481384,
+        "Hentai": 0.015540882013738155,
+        "Porn": 0.0030747437849640846,
+        "Sexy": 0.0012450397480279207
+      },
+      "elapsedMs": 24,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-15333005.webp",
+      "id": 17,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.6661131381988525,
+        "Drawing": 0.3238344192504883,
+        "Hentai": 0.006687014363706112,
+        "Porn": 0.0022417460568249226,
+        "Sexy": 0.0011236515128985047
+      },
+      "elapsedMs": 26,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-15457199.webp",
+      "id": 18,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9996402263641357,
+        "Porn": 0.000178736328962259,
+        "Drawing": 0.0001433289871783927,
+        "Sexy": 0.00002530276105972007,
+        "Hentai": 0.000012372067430987954
+      },
+      "elapsedMs": 25,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-20771891.webp",
+      "id": 19,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9919409155845642,
+        "Drawing": 0.00787088181823492,
+        "Porn": 0.00007364957127720118,
+        "Sexy": 0.00006836552347522229,
+        "Hentai": 0.00004619706669473089
+      },
+      "elapsedMs": 25,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-31080984.webp",
+      "id": 20,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9974024891853333,
+        "Drawing": 0.001729739597067237,
+        "Porn": 0.000702552089933306,
+        "Hentai": 0.00009141460759565234,
+        "Sexy": 0.00007375686254817992
+      },
+      "elapsedMs": 26,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-18648310.webp",
+      "id": 21,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9971203804016113,
+        "Porn": 0.0016974281752482057,
+        "Drawing": 0.0006287754513323307,
+        "Sexy": 0.0004696866380982101,
+        "Hentai": 0.00008375170000363141
+      },
+      "elapsedMs": 30,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-32016498.webp",
+      "id": 22,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9999873638153076,
+        "Drawing": 0.000010808371371240355,
+        "Porn": 0.0000012606628843059298,
+        "Sexy": 2.9471573270711815e-7,
+        "Hentai": 2.359079758207372e-7
+      },
+      "elapsedMs": 27,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-32837390.webp",
+      "id": 23,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9977805018424988,
+        "Drawing": 0.0017886862624436617,
+        "Sexy": 0.0003322463599033654,
+        "Porn": 0.00008038560190470889,
+        "Hentai": 0.000018250437278766185
+      },
+      "elapsedMs": 32,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    },
+    {
+      "file": "assets/library/commons-36590453.webp",
+      "id": 24,
+      "ok": true,
+      "scores": {
+        "Neutral": 0.9965315461158752,
+        "Drawing": 0.0024135641288012266,
+        "Porn": 0.0005923985736444592,
+        "Sexy": 0.0003573079011403024,
+        "Hentai": 0.00010514723544474691
+      },
+      "elapsedMs": 30,
+      "backend": "wasm",
+      "tensorBytes": 10477848
+    }
+  ]
+}

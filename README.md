@@ -1,57 +1,49 @@
 # NOOG — Reverse the goon
 
-NOOG is an experimental desktop Chrome extension for reducing exposure to unwanted web content. It provides local image checks, promotional-caption filters, custom keywords and reversible content covers with cats, nature, wisdom or quiet replacements.
+NOOG is a free desktop Chrome extension that reversibly covers unwanted images and promotional captions with cats, nature, wisdom or quiet cards.
 
-Website: [noog.symbai.studio](https://noog.symbai.studio/)
+Version **0.10.0** works automatically on accessible HTTP(S) pages. Pornographic-image checks and gambling-promotion rules start enabled. Image classification runs on the user's device with bundled model weights and WASM. Captions use local phrase rules. No account, API key, separate AI installation or hosted inference service is required.
 
-## Repository status
+Known private apps and supported private-message routes are excluded before analysis. Forms, editable regions and embedded frames are skipped. Unrecognized private websites can be paused in the toolbar. Chrome's protected pages remain inaccessible. Detection and layout coverage are imperfect; media remains visible when a check fails unless the user selects optional strict feed covers.
 
-This first commit preserves the downloaded **0.9.0 Chrome Web Store package**, its included licenses and the initial release findings. The JavaScript files are already bundled and minified. The original editable application source, dependency lockfile, build configuration and test suite have not yet been recovered from the earlier Sites project.
+## Build and test
 
-This is a release baseline, not a successful source rebuild. The installed extension's local-image-model setup check failed twice, including after reload. Its underlying cause remains unresolved. No Chrome Web Store submission has been made.
+Use Node 22.13.0 (matching NSFWJS's published engine declaration), npm 10 or 11, and Python 3 for ZIP packaging.
 
-The intended public launch is free. The baseline still contains optional TypeSafe caption sharing and unfinished Plus controls. The launch plan defers Plus; the first commit does not remove those features or change the extension's behavior.
+```sh
+npm ci
+npm run build
+npm test
+npx playwright install chromium
+npm run test:browser
+npm run package
+```
 
-## Contents
+Load `dist/extension` using Chrome's **Load unpacked** button on `chrome://extensions`. The optional **Check protection setup** link exercises the bundled model with a cat photo. A passing setup check does not establish detection accuracy.
+
+Browser tests use isolated profiles without personal browser data. They exercise fresh-install filtering, privacy exclusions, a card becoming an editor, SPA private routes, reveals, saved corrections, pause controls, cookie-free image fetching and actual missing-model failure. `node tests/model-eval.mjs` measures inference on 24 bundled cat/nature photographs and writes `dist/model-evaluation.json`. Set `CHROMIUM_EXECUTABLE` when using a separately installed compatible test Chromium.
+
+## Repository structure
 
 | Path | Contents |
 | --- | --- |
-| `extension/` | Exact unpacked 0.9.0 Web Store package, including assets and third-party licenses |
-| `releases/NOOG-Chrome-Web-Store-0.9.0.zip` | Original downloaded upload archive, preserved unchanged |
-| `releases/0.9.0-provenance.json` | Package digest and verification record |
-| `docs/RELEASE-READINESS.md` | Observed release blocker and remaining launch work |
-| `docs/STORE-LISTING-DRAFT.md` | Draft listing and permission explanations for final-package review |
-| `docs/INSTALL-AND-USE-RECOMMENDATION.md` | Research comparing model deployment options for a free launch without user API keys |
+| `src/` | Editable extension modules, shared privacy/settings/filter logic and recovered replacement catalogs |
+| `public/` | Manifest, static pages, fonts, licensed photos and notices |
+| `scripts/` | Dependency-based build and deterministic ZIP packaging |
+| `tests/` | Behavior tests, real-browser integration and a limited benign-image evaluation |
+| `releases/NOOG-Chrome-Web-Store-0.10.0.zip` | Current Web Store upload package |
+| `releases/NOOG-Chrome-Web-Store-0.9.0.zip` | Immutable original release baseline |
+| `docs/RELEASE-READINESS.md` | Verification evidence and remaining publication work |
+| `docs/PRIVACY.md` | Current extension privacy policy |
 
-## Try the baseline
+The original editable Sites project was inaccessible from this account. Application logic and catalogs were recovered from the preserved 0.9.0 distribution; vendor code was replaced with pinned npm dependencies and a normal build. This is reconstructed editable source, not an export of the original project. The original archive and its provenance remain unchanged.
 
-Requires desktop Chrome 116 or later.
+The 0.9.0 worker attempted threaded WASM blob scripts prohibited by its MV3 security policy. The rebuilt worker explicitly uses single-worker WASM, with no CPU or remote inference fallback. Unfinished Plus, cloud caption sharing, key-entry, schedule and optional site-activation paths have been removed.
 
-1. Open `chrome://extensions` and enable Developer mode.
-2. Choose **Load unpacked** and select this repository's `extension` folder.
-3. Open NOOG's toolbar and choose **Check protection setup**.
-4. Run the setup check before enabling protection on a real feed.
+## Privacy and support
 
-NOOG is experimental. It can miss unwanted content or cover wanted images. The setup check exercises execution with a benign bundled image; even a passing result does not establish detection accuracy.
+[Privacy policy](docs/PRIVACY.md) · [Report a problem](https://github.com/starrybodies/noog/issues)
 
-## Package verification
+NOOG fetches eligible displayed images from their original public hosts without cookies or a referring page. Those hosts receive the request and IP address. It does not upload images/captions to NOOG or an AI provider, collect analytics, or store a browsing-history log.
 
-All 114 unpacked files match the original ZIP byte for byte. All seven JavaScript entry bundles passed syntax checks. These checks do not establish runtime behavior or security.
-
-Original archive SHA-256:
-
-```text
-d89428ddaec4663e6f1a4997d7b8f6956d25fcd9b56576e34969d26f87d6e819
-```
-
-Run basic syntax checks from the repository root:
-
-```sh
-for file in extension/*.js; do
-  node --check "$file" || exit 1
-done
-```
-
-## Licenses
-
-The package's third-party license notices and photograph credits are preserved in `extension/licenses`, the `*.LEGAL.txt` files and `extension/licenses-photo-credits.json`. No new project-wide license is granted by this repository.
+Third-party notices and photo credits are preserved in `public/licenses`, generated `*.LEGAL.txt` files and `public/licenses-photo-credits.json`. No project-wide license is granted by this repository.
