@@ -1,12 +1,12 @@
 # NOOG 0.10.0 store listing
 
-Publication status: not submitted. This text describes the rebuilt free extension.
+Publication status: package uploaded and store draft saved on October 14, 2026. Item ID: `kfcbhdmmkipncdaajpbccefdkjjkihld`. Submission awaits publisher contact-email selection and verification. This text describes the rebuilt free extension.
 
 **Title:** NOOG — Reverse the goon
 
 **Short description:** Filter unwanted images, gambling promotions and custom triggers. Local image checks. Your feed, your choice.
 
-**Language:** English · **Category:** Productivity · **Distribution:** Free, public
+**Language:** English · **Category:** Productivity → Tools · **Distribution:** Free, public
 
 **Homepage:** https://github.com/starrybodies/noog
 
@@ -51,6 +51,12 @@ Help users reduce exposure to self-selected unwanted web content by locally dete
 
 Executable JavaScript, WASM and model weights are packaged. No remotely hosted executable code, caption API, billing endpoint or telemetry endpoint is used.
 
-## Remaining publisher decisions
+## Saved dashboard configuration
 
-The user completed the non-trader declaration. Review dashboard privacy-category wording against actual local page processing and cookie-free image fetching. Select mature-content designation accurately without including explicit material in listing assets. Use docs/verification/0.10.0-filtering.png (1280×800) as the store screenshot. The narrow controls capture is supplemental evidence. Use docs/store/small-promo-440x280.png for the required small promotional tile and public/assets/icon128.png for the store icon. Verify all public links.
+The dashboard confirms package version 0.10.0. Description, English language, Tools category, homepage/support links, icon, filtering screenshot and small promo tile are saved. Distribution is free of charge, public and all regions. No in-app purchases are declared.
+
+Privacy declarations cover personally identifiable information (creator identifiers), web history (current page addresses used locally) and website content. The three Limited Use disclosures are certified. No remotely hosted executable code is used. The public privacy URL points to docs/PRIVACY.md.
+
+Reviewer notes explain that no login, payment or separate AI service is needed, code/WASM/weights are bundled, covers are reversible and private areas are excluded. Mature-content designation is off: the extension and its supplied assets contain no sexual imagery, explicit material, strong profanity or links to adult sites.
+
+The user completed the non-trader declaration. The dashboard's only remaining submission blockers are adding and verifying a public publisher contact email. No review submission or live listing is claimed.

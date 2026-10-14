@@ -1,6 +1,6 @@
 # NOOG 0.10.0 release readiness
 
-October 14, 2026 · Implementation verified; Chrome Web Store submission pending publisher setup.
+October 14, 2026 · Implementation verified; Chrome Web Store package uploaded; submission pending contact-email verification.
 
 ## Implemented
 
@@ -49,4 +49,4 @@ SHA-256: `954c41b83a0eca62d0891df0c1bc7df41b064b016ad3641c8475ffd3c2eaa0f1`.
 
 ## Remaining publication work
 
-The user completed the publisher non-trader declaration. Store submission still needs dashboard listing/privacy fields and final upload. A 1280×800 screenshot of real filtering on a labeled synthetic demo page is included in docs/verification/0.10.0-filtering.png; the controls capture is supplemental evidence. Publication is subject to Google's review; no live listing is claimed.
+The user completed the publisher non-trader declaration and manually uploaded the final 0.10.0 ZIP. The dashboard confirms version 0.10.0 and item ID `kfcbhdmmkipncdaajpbccefdkjjkihld`. Listing, required graphics, privacy fields and reviewer instructions are saved. Distribution is free, public and all regions. Submission is blocked only by adding and verifying a public publisher contact email. Publication remains subject to Google's review; no review submission or live listing is claimed.
