@@ -18,6 +18,10 @@ Listing text and permission explanations are in `docs/STORE-LISTING-DRAFT.md`. P
 
 The folder includes a poster, English WebVTT captions, accessible standalone player (`video/index.html`), publication credits and a ready YouTube description. Music credit must remain visible beside the website player and in the YouTube description. Video SHA-256: `9b58a467021a112c75e989ed749c643a7e4003d98ba68d10a046ca7ee9e03d83`.
 
+Published October 14, 2026 as an **unlisted, embeddable video** on the existing Samuel Barnes channel: https://www.youtube.com/watch?v=OtbgUlEtpaE. The saved upload includes the approved poster, English captions, music/photo credits, AI disclosure, not-made-for-kids audience and Science & Technology category. YouTube reported no copyright issues at publication. Details are in `video/publication.json`; the exact Chrome Store promo field value is in `video/chrome-store-promo-url.txt`.
+
+The Chrome Store dashboard was checked after publication. It still shows **Pending review**, and the Global promo video field and Save draft button are disabled. The promo URL has not been added to that listing. Add it when editing becomes available; the current review has not been withdrawn or resubmitted.
+
 The [Chrome Web Store listing documentation](https://developer.chrome.com/docs/webstore/cws-dashboard-listing#graphic_assets) specifies a YouTube URL for the promotional video field. The MP4 belongs in the promotional release materials; the installed extension upload ZIP remains unchanged. This avoids an extra 14 MB in every installation and preserves the already submitted binary.
 
 The current site at https://noog.symbai.studio/ is owned by the previous Sites account. Its editable project is `appgprj_6ac5ce895b8081918ee69055c39e2f00`, observed in that account's site settings. The connector in this account returns `Sites project not found`; no replacement site has been created.

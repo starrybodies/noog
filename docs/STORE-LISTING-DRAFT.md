@@ -14,6 +14,8 @@ Publication status: submitted for review on October 14, 2026. Item ID: `kfcbhdmm
 
 **Support:** https://github.com/starrybodies/noog/issues
 
+**Promotional video, prepared for the next editable listing update:** https://www.youtube.com/watch?v=OtbgUlEtpaE. Published unlisted with embedding enabled on October 14, 2026. The dashboard's Global promo video field is disabled while Pending review, so this URL has not yet been added to the submitted listing.
+
 ## Detailed description
 
 NOOG helps you choose what gets through. Cover unwanted images and promotional posts, then replace them with cats, nature, wisdom or quiet cards.
