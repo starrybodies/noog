@@ -32,6 +32,6 @@ Ship the first option. Repair the bundled model path and its diagnostics; remove
 
 Start protection automatically with safe defaults and initialize the bundled model on demand. Process visible media through a bounded worker queue and cache; avoid repeated checks and full-feed uploads. Display actual readiness or an actionable failure instead of a successful protection state when checks cannot run. Covers stay reversible; no complete-blocking claim.
 
-Proposed access default: supported public feeds work after Chrome's installation permission prompt; other websites are opt-in. Across-all-websites behavior remains a user preference decision. Chrome consent cannot be bypassed. [Permissions](https://developer.chrome.com/docs/extensions/develop/concepts/declare-permissions).
+The user selected automatic protection across accessible HTTP(S) websites, with private apps and conversations excluded before analysis. Declare necessary page/image-host access at installation; no separate enable-per-site setup. Chrome consent and protected-page restrictions still apply. [Permissions](https://developer.chrome.com/docs/extensions/develop/concepts/declare-permissions).
 
 Recover editable source before product changes. Release acceptance: clean installation without saved settings or keys, working inference and reversals, private-page exclusions, accurate failure status, and measured latency/memory/false-cover rates on representative desktop devices. Broader site compatibility and classification accuracy require separate live-page evaluation.
