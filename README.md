@@ -6,6 +6,10 @@ Version **0.10.0** works automatically on accessible HTTP(S) pages. Pornographic
 
 Known private apps and supported private-message routes are excluded before analysis. Forms, editable regions and embedded frames are skipped. Unrecognized private websites can be paused in the toolbar. Chrome's protected pages remain inaccessible. Detection and layout coverage are imperfect; media remains visible when a check fails unless the user selects optional strict feed covers.
 
+## Chrome Web Store status
+
+NOOG 0.10.0 was submitted for review on October 14, 2026 under **Symbai Studios**, with verified public contact **hi@samu.quest**. Distribution is free, public and all regions. Automatic publication after approval is enabled. The dashboard shows **Pending review**; a live store listing is not yet claimed. See [submission record](docs/STORE-SUBMISSION.md).
+
 ## Build and test
 
 Use Node 22.13.0 (matching NSFWJS's published engine declaration), npm 10 or 11, and Python 3 for ZIP packaging.

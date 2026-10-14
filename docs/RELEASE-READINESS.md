@@ -1,6 +1,6 @@
 # NOOG 0.10.0 release readiness
 
-October 14, 2026 · Implementation verified; Chrome Web Store package uploaded; submission pending contact-email verification.
+October 14, 2026 · Implementation verified; Chrome Web Store submission accepted; Pending review.
 
 ## Implemented
 
@@ -47,6 +47,8 @@ Original 0.9.0 ZIP remains unchanged:
 Current upload ZIP: `releases/NOOG-Chrome-Web-Store-0.10.0.zip`.
 SHA-256: `954c41b83a0eca62d0891df0c1bc7df41b064b016ad3641c8475ffd3c2eaa0f1`.
 
-## Remaining publication work
+## Publication status
 
-The user completed the publisher non-trader declaration and manually uploaded the final 0.10.0 ZIP. The dashboard confirms version 0.10.0 and item ID `kfcbhdmmkipncdaajpbccefdkjjkihld`. Listing, required graphics, privacy fields and reviewer instructions are saved. Distribution is free, public and all regions. Submission is blocked only by adding and verifying a public publisher contact email. Publication remains subject to Google's review; no review submission or live listing is claimed.
+The user completed the publisher non-trader declaration and manually uploaded the final 0.10.0 ZIP. The dashboard confirms version 0.10.0 and item ID `kfcbhdmmkipncdaajpbccefdkjjkihld`. Listing, required graphics, privacy fields and reviewer instructions are saved. Distribution is free, public and all regions. Publisher: **Symbai Studios**. Verified public contact: **hi@samu.quest**.
+
+The review submission was accepted on October 14, 2026. The dashboard shows **Pending review**, with automatic publication after approval selected. Google warned that broad host permissions can require an in-depth review. No live listing or approval date is claimed. See `docs/STORE-SUBMISSION.md`.

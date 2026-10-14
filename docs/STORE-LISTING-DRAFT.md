@@ -1,10 +1,10 @@
 # NOOG 0.10.0 store listing
 
-Publication status: package uploaded and store draft saved on October 14, 2026. Item ID: `kfcbhdmmkipncdaajpbccefdkjjkihld`. Submission awaits publisher contact-email selection and verification. This text describes the rebuilt free extension.
+Publication status: submitted for review on October 14, 2026. Item ID: `kfcbhdmmkipncdaajpbccefdkjjkihld`. Dashboard status: **Pending review**. Automatic publication after approval is enabled. This text describes the rebuilt free extension.
 
 **Title:** NOOG — Reverse the goon
 
-**Short description:** Filter unwanted images, gambling promotions and custom triggers. Local image checks. Your feed, your choice.
+**Summary from package:** Reverse the goon. Filter pornographic images, gambling promotions and your custom triggers. Local image checks. Your choice.
 
 **Language:** English · **Category:** Productivity → Tools · **Distribution:** Free, public
 
@@ -59,4 +59,4 @@ Privacy declarations cover personally identifiable information (creator identifi
 
 Reviewer notes explain that no login, payment or separate AI service is needed, code/WASM/weights are bundled, covers are reversible and private areas are excluded. Mature-content designation is off: the extension and its supplied assets contain no sexual imagery, explicit material, strong profanity or links to adult sites.
 
-The user completed the non-trader declaration. The dashboard's only remaining submission blockers are adding and verifying a public publisher contact email. No review submission or live listing is claimed.
+The user completed the non-trader declaration. Publisher name is **Symbai Studios**; verified public contact is **hi@samu.quest**. The final submission was accepted and the dashboard shows **Pending review**. Google warned that broad host permissions can require an in-depth review; those permissions are retained to meet automatic filtering across accessible websites. Automatic publication after approval is enabled. No live listing is claimed.
