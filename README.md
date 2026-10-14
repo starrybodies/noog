@@ -8,6 +8,8 @@ Known private apps and supported private-message routes are excluded before anal
 
 ## Chrome Web Store status
 
+The [NOOG website](https://noog.symbai.studio/) is live as **Free alpha · 0.10.0**, with the approved launch film and a verified manual-install download. See [website publication and verification](docs/SITE-ALPHA-PUBLICATION.md).
+
 NOOG 0.10.0 was submitted for review on October 14, 2026 under **Symbai Studios**, with verified public contact **hi@samu.quest**. Distribution is free, public and all regions. Automatic publication after approval is enabled. The dashboard shows **Pending review**; a live store listing is not yet claimed. See [submission record](docs/STORE-SUBMISSION.md).
 
 ## Build and test

@@ -18,5 +18,9 @@
   "youtube_copyright_check": "No issues found at publication",
   "chrome_store_status": "Pending review; Global promo video field disabled",
   "chrome_store_promo_added": false,
-  "site_video_integrated": false
+  "site_video_integrated": true,
+  "site_url": "https://noog.symbai.studio/#launch-film",
+  "site_saved_version": 20,
+  "site_alpha_version": "0.10.0",
+  "site_alpha_zip_hash_verified": true
 }
