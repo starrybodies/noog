@@ -1,0 +1,2 @@
+TensorFlow.js 4.22.0
+Copyright Google LLC. Licensed under Apache 2.0. See Apache-2.0.txt and image-worker.js.LEGAL.txt. Source: https://github.com/tensorflow/tfjs

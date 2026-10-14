@@ -1,0 +1,71 @@
+{
+  "manifest_version": 3,
+  "name": "NOOG — Reverse the goon",
+  "version": "0.9.0",
+  "minimum_chrome_version": "116",
+  "description": "Reverse the goon. Filter pornographic images, gambling promotions and your custom triggers. Local image checks. Your choice.",
+  "permissions": [
+    "storage",
+    "offscreen",
+    "scripting",
+    "activeTab"
+  ],
+  "optional_permissions": [
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*",
+    "https://pbs.twimg.com/*"
+  ],
+  "optional_host_permissions": [
+    "https://api.typesafe.ai/*",
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "NOOG switchboard"
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://twitter.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/library/*.webp",
+        "reset.html",
+        "assets/cats.webp",
+        "assets/cats-cuddle.webp",
+        "assets/nature.webp",
+        "assets/nature-dawn.webp",
+        "assets/noog-wordmark.png"
+      ],
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; worker-src 'self'"
+  }
+}
