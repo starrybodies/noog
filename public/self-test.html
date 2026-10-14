@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>NOOG · Check protection setup</title>
+    <link rel="stylesheet" href="self-test.css" />
+  </head>
+  <body>
+    <main>
+      <img src="assets/noog-wordmark.png" alt="NOOG" class="logo" /><span
+        class="version"
+        >SETUP CHECK · <span id="version"></span
+      ></span>
+      <h1>Ready to reverse<br />the goon?</h1>
+      <p>
+        NOOG starts automatically on accessible websites. This optional check
+        verifies your installed copy.
+      </p>
+      <p class="note">
+        Uses a bundled cat photo to check the local model. Reads no feed content
+        and changes no filter preferences.
+      </p>
+      <div class="actions"><button id="run-check">Run setup check</button></div>
+      <p id="check-status" role="status" aria-live="polite">
+        Ready when you are.
+      </p>
+      <ul id="check-results" aria-label="Setup results"></ul>
+      <button id="export-report" class="secondary" hidden>
+        Save setup report
+      </button>
+      <p class="note">
+        Reports contain version, check time, result codes and model
+        timing/memory only. No URLs, captions, images or custom keywords.
+      </p>
+      <p class="note">
+        A passing check confirms setup, not detection accuracy. Sampling can
+        miss content; protected streams and some layouts cannot be read.
+      </p>
+      <a href="privacy.html">Privacy &amp; how NOOG works</a>
+    </main>
+    <script src="self-test.js"></script>
+  </body>
+</html>

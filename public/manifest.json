@@ -1,25 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "NOOG — Reverse the goon",
-  "version": "0.9.0",
+  "name": "NOOG \u2014 Reverse the goon",
+  "version": "0.10.0",
   "minimum_chrome_version": "116",
   "description": "Reverse the goon. Filter pornographic images, gambling promotions and your custom triggers. Local image checks. Your choice.",
   "permissions": [
     "storage",
     "offscreen",
-    "scripting",
     "activeTab"
   ],
-  "optional_permissions": [
-    "alarms"
-  ],
   "host_permissions": [
-    "https://x.com/*",
-    "https://twitter.com/*",
-    "https://pbs.twimg.com/*"
-  ],
-  "optional_host_permissions": [
-    "https://api.typesafe.ai/*",
     "https://*/*",
     "http://*/*"
   ],
@@ -38,14 +28,15 @@
   "content_scripts": [
     {
       "matches": [
-        "https://x.com/*",
-        "https://twitter.com/*"
+        "https://*/*",
+        "http://*/*"
       ],
       "js": [
         "content.js"
       ],
       "run_at": "document_start",
-      "all_frames": true
+      "all_frames": false,
+      "match_about_blank": false
     }
   ],
   "web_accessible_resources": [
