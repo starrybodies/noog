@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Welcome to NOOG</title>
     <link rel="stylesheet" href="self-test.css" />
+    <link rel="stylesheet" href="assets/kitty-mascot.css" />
   </head>
   <body>
     <main>
       <img src="assets/noog-wordmark.png" width="160" alt="NOOG" />
       <p id="version"></p>
-      <h1>Reverse the goon.<br />Keep the good stuff.</h1>
+      <div class="campaign-header welcome-campaign">
+        <h1>Reverse the goon.<br />Keep the good stuff.</h1>
+        <button class="kitty-mascot" id="kitty-mascot" type="button" aria-label="Pet kitty three times for a game" aria-describedby="kitty-secret" data-pets="0">
+          <img src="assets/reverse-sentinel-800.webp" width="800" height="533" alt="" />
+          <span class="kitty-peek" aria-hidden="true"><img class="awake" src="assets/kitty-lime.svg" alt="" /><img class="sleepy" src="assets/kitty-sleepy.svg" alt="" /></span>
+        </button>
+      </div>
+      <div class="kitty-secret" id="kitty-secret" aria-live="polite"><span id="kitty-hint"></span><a id="kitty-game-link" target="_blank" rel="noopener" hidden>Play kitty break</a></div>
       <p>
         NOOG is ready to filter accessible websites. Pornographic-image checks
         and gambling-promotion rules start on by default. No account or API key
@@ -20,6 +28,9 @@
       <p>
         The bundled model checks images and readable video frames locally.
         Caption rules look for promotional phrases and your custom keywords.
+        On supported public feeds, a caption, image or sampled-video match swaps
+        the whole post, including its text and media. Phrase rules can miss
+        context and unfamiliar wording.
         There is no external classification service or separate AI installation.
       </p>
       <h2>Private spaces stay private</h2>

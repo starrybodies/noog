@@ -126,6 +126,7 @@ function Popup() {
         onChange={change}
         status={saved}
         readiness={readiness}
+        onKittyGame={() => chrome.tabs.create({ url: chrome.runtime.getURL("kitty-game.html") })}
       />
       <section className="page-status" aria-label="Protection status">
         <p role="status">

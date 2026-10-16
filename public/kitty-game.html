@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Kitty break — NOOG</title>
+    <link rel="stylesheet" href="kitty-game.css" />
+    <script src="kitty-game.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section id="game" data-state="ready" aria-labelledby="game-title">
+        <header>
+          <div class="brand"><img src="assets/noog-wordmark.png" alt="NOOG" width="100" /></div>
+          <button id="close" class="quiet" type="button">Close game</button>
+        </header>
+        <div class="intro">
+          <div><h1 id="game-title">A little<br />kitty break.</h1><p>Catch eight kitties in 15 seconds.<br />Then back to your world.</p></div>
+          <img class="campaign" src="assets/reverse-sentinel-800.webp" width="800" height="533" alt="" />
+        </div>
+        <div class="scoreboard" aria-label="Session progress">
+          <p><strong id="score">0</strong><span>of 8 caught</span></p>
+          <p><strong id="time">15</strong><span>seconds left</span></p>
+        </div>
+        <div id="playfield" aria-label="Kitty play area">
+          <div class="boxes" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <button id="kitty" type="button" aria-label="Catch kitty" aria-describedby="instructions" hidden><img src="assets/kitty-lime.svg" width="80" height="75" alt="" /></button>
+          <div id="resting" aria-hidden="true"><img src="assets/kitty-sleepy.svg" width="96" height="90" alt="" /><span>Union-mandated nap.</span></div>
+        </div>
+        <p id="game-status" role="status" aria-live="polite" aria-atomic="true">Your feed can wait for 15 seconds.</p>
+        <div class="actions"><button id="start" type="button">Start game</button><button id="pause" class="quiet" type="button" hidden>Pause game</button></div>
+        <p id="instructions">Click or tap the kitty. Keyboard: press Enter or Space on the focused kitty. Escape closes the game.</p>
+        <p class="local-note">A tiny local game. No scores saved. No prizes. Just cats.</p>
+      </section>
+      <section id="closed" hidden aria-labelledby="closed-title"><img src="assets/kitty-sleepy.svg" width="100" height="94" alt="" /><h1 id="closed-title" tabindex="-1">Break over.</h1><p>The kitties are taking a nap. You can close this tab.</p><button id="reopen" type="button">Open game again</button></section>
+    </main>
+  </body>
+</html>
