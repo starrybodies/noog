@@ -199,16 +199,17 @@ function createAdapter(document) {
     let k = isX ? n.querySelector('[data-testid="tweetText"]') : null,
       f =
         (isInstagram &&
-          ([...new Set(
-            [...n.querySelectorAll('h1,[data-testid="post-caption"],span[dir="auto"]')]
-              .map((B) => B.textContent?.trim())
-              .filter(Boolean),
-          )].join("\n") ||
-            n.textContent?.trim() ||
+          [...new Set([
+            [...new Set(
+              [...n.querySelectorAll('h1,[data-testid="post-caption"],span[dir="auto"]')]
+                .map((B) => B.textContent?.trim())
+                .filter(Boolean),
+            )].join("\n") || n.textContent?.trim(),
             imagesIn(n)
               .find((B) => Math.max(B.width || 0, B.naturalWidth || 0) >= 120)
-              ?.getAttribute?.("alt") ||
-            n.getAttribute("alt"))) ||
+              ?.getAttribute?.("alt"),
+            n.getAttribute("alt"),
+          ].filter(Boolean))].join("\n")) ||
         "",
       A = (
         isX

@@ -188,6 +188,11 @@ check("Instagram visible caption supplements benign image alt", async () => {
   try { await cover(page); await hidden(page); }
   finally { await page.close(); }
 });
+check("Instagram username cannot suppress a promotional image alt", async () => {
+  const page = await fixture(`<article><a href="/publiccat/"><span dir="auto">publiccat</span></a><img src="https://media.example.test/photo.webp" alt="${promotion}"></article>`, { host: "www.instagram.com", settings: { sexual: false } });
+  try { await cover(page); await hidden(page); }
+  finally { await page.close(); }
+});
 check("Instagram heading and data caption are combined", async () => {
   const page = await fixture(`<article><h1>Ordinary title</h1><div data-testid="post-caption">${promotion}</div>${image}</article>`, { host: "www.instagram.com", settings: { sexual: false } });
   try { await cover(page); await hidden(page); }
