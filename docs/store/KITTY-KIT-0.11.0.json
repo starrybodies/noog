@@ -1,0 +1,20 @@
+{
+  "file": "NOOG-Kitty-Kit-0.11.0.zip",
+  "bytes": 188919,
+  "sha256": "a7bd1759f51b0e385dc0e11711a678c3439a31da7c26a8a799ae315e8589d510",
+  "source": {
+    "version": "0.11.0",
+    "source_commit": "ab710dc4028a33fd4e58104d61555a22f85f6162",
+    "files": {
+      "kitty-game.html": "fa8f77c564c28bfe293c222f197529c9a2cae651eadaa014a249e6f996ab5712",
+      "kitty-game.css": "c330901c2857acc719ed0befc86a133f4be89f16deb186c67900f49139a47f83",
+      "kitty-game.js": "39c946ce7cf2a5593ede411d4933e6adbbc47a725c2b1aaabb1c9554f5fd686e",
+      "assets/inter.woff2": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+      "assets/noog-wordmark.png": "4e3fe27f16034ced426cc26b5caae37c3a14e44df2542d8b34128635d38b7004",
+      "assets/reverse-sentinel-800.webp": "747ad1f7074ca763c3c55905419b30fc09a2ef8b2132ce9d6fe669ff9e2cfa5d",
+      "assets/kitty-lime.svg": "e4c96a39c29a1a4c4cae25f09586f1ccd4a8341dc54523790a0373f8f0f0e650",
+      "assets/kitty-sleepy.svg": "ea8ab4af58809d307570152bef27698369e0b1bb746a11e740c32ccc2c7ff50e",
+      "assets/kitty-mascot.css": "f8bdc8e82b7a6c9e1ca3d967efbd21e80bf49cd90232224dd0309572e1cc3041"
+    }
+  }
+}
