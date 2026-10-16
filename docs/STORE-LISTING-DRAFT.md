@@ -1,6 +1,6 @@
 # NOOG 0.11.0 store listing
 
-Publication status: **0.10.0 is live**, verified October 16, 2026. This draft describes the 0.11.0 update; upload/review/publication status is recorded separately in `docs/STORE-SUBMISSION.md`. Item ID: `kfcbhdmmkipncdaajpbccefdkjjkihld`.
+Publication status: **0.10.0 is live**, verified October 16, 2026. The 0.11.0 update and this description were submitted October 16, 2026 and are Pending review; publication status is recorded separately in `docs/STORE-SUBMISSION.md`. Item ID: `kfcbhdmmkipncdaajpbccefdkjjkihld`.
 
 **Title:** NOOG — Reverse the goon
 

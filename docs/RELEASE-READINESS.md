@@ -1,6 +1,6 @@
 # NOOG 0.11.0 release readiness
 
-October 16, 2026 · Implementation and package verified; Store update ready for submission. Current live Store version: 0.10.0.
+October 16, 2026 · Implementation and package verified; Chrome Web Store update submitted and Pending review. Current live Store version: 0.10.0.
 
 ## Delivered
 
@@ -18,7 +18,7 @@ Production build passed. Ten unit tests and all six browser suites passed with c
 - Missing-model failure remains honest and makes no remote fallback request.
 - Seventeen whole-post regressions passed, including image/video/text decisions, mixed-video pause, full caption/CTA hiding, standalone tiles, Instagram username with harmful alt, Reddit body, private/editor transitions, removed overlays, hidden recycled posts and changed streams.
 - Game suite passed keyboard scoring, timeout/eight-catch completion, restart, hidden/manual pause, close/reopen, reduced motion, bounds, 320px layout and actual extension popup game route.
-- Independent task reviews passed after fixing the Instagram username/alt regression. Whole-branch review is the final code gate before upload.
+- Independent task reviews passed after fixing the Instagram username/alt regression. Whole-branch review passed with no upheld findings; three extra delayed-verdict probes also passed. See `docs/verification/0.11.0-final-review.md`.
 - Cold/warm model setup checks: 316/43 ms on this machine. These are setup timing samples, not detection-accuracy measurements. Prior limited benign-image evaluation remains historical 0.10.0 evidence; this release makes no new accuracy claim.
 
 The test-browser installer stalled extracting its complete official download; the same official archive was extracted with macOS's native archive utility. Tests then used the expected 145.0.7632.6 executable. No production code, security setting or browser profile was changed for that repair.
@@ -33,7 +33,7 @@ Immutable prior archives preserve release provenance. They are not active compat
 
 ## Website and publication
 
-The current Store listing is live 0.10.0, verified October 16. Samuel approved the complete update and authorized the original **Develop NOOG Product** chat to update/publish the existing website. Launch brief and tested portable kit were delivered there; website publication and Store 0.11.0 status are recorded separately once observed.
+The current Store listing is live 0.10.0, verified October 16. Samuel approved the complete update and authorized the original **Develop NOOG Product** chat to update/publish the existing website. Launch brief and tested portable kit were delivered there; website publication is recorded separately once observed. The authenticated publisher dashboard confirms the 0.11.0 upload and accepted review submission; status is Pending review. See `docs/STORE-SUBMISSION.md`.
 
 Existing project/domain/audience/subscriber data and approved film credits remain requirements. The game kit is `releases/NOOG-Kitty-Kit-0.11.0.zip`; checksum/provenance: `docs/store/KITTY-KIT-0.11.0.json`.
 

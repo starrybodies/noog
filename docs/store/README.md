@@ -5,7 +5,7 @@ The listing uses the existing NOOG identity. `promo.html` is the editable source
 | Store field            | File                                     | Dimensions |
 | ---------------------- | ---------------------------------------- | ---------- |
 | Store icon             | `public/assets/icon128.png`              | 128×128    |
-| Screenshot             | `docs/verification/0.10.0-filtering.png` | 1280×800   |
+| Screenshot             | `docs/verification/0.11.0-filtering.png` | 1280×800   |
 | Small promotional tile | `docs/store/small-promo-440x280.png`     | 440×280    |
 
 The screenshot captures the actual built extension on a clearly labeled synthetic demonstration page. It does not claim a live site's layout or human-content classification accuracy. `docs/verification/0.10.0-controls.png` records the real controls for verification; its narrow dimensions are not intended for the store screenshot field.
@@ -20,7 +20,7 @@ The folder includes a poster, English WebVTT captions, accessible standalone pla
 
 Published October 14, 2026 as an **unlisted, embeddable video** on the existing Samuel Barnes channel: https://www.youtube.com/watch?v=OtbgUlEtpaE. The saved upload includes the approved poster, English captions, music/photo credits, AI disclosure, not-made-for-kids audience and Science & Technology category. YouTube reported no copyright issues at publication. Details are in `video/publication.json`; the exact Chrome Store promo field value is in `video/chrome-store-promo-url.txt`.
 
-The Chrome Store dashboard was checked after publication. It still shows **Pending review**, and the Global promo video field and Save draft button are disabled. The promo URL has not been added to that listing. Add it when editing becomes available; the current review has not been withdrawn or resubmitted.
+On October 16, 2026, the live 0.10.0 listing became editable. The approved YouTube URL was added to Global promo video and saved with the 0.11.0 update. That update is now Pending review; no second video upload was made.
 
 The [Chrome Web Store listing documentation](https://developer.chrome.com/docs/webstore/cws-dashboard-listing#graphic_assets) specifies a YouTube URL for the promotional video field. The MP4 belongs in the promotional release materials; the installed extension upload ZIP remains unchanged. This avoids an extra 14 MB in every installation and preserves the already submitted binary.
 
