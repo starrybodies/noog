@@ -19,6 +19,7 @@ await build({
     "src/popup.jsx",
     "src/self-test.js",
     "src/welcome.js",
+    "src/kitty-game.js",
   ],
   outdir: out,
   bundle: true,

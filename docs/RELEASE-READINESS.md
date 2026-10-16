@@ -1,54 +1,40 @@
-# NOOG 0.10.0 release readiness
+# NOOG 0.11.0 release readiness
 
-October 14, 2026 · Implementation verified; Chrome Web Store submission accepted; Pending review.
+October 16, 2026 · Implementation and package verified; Store update ready for submission. Current live Store version: 0.10.0.
 
-## Implemented
+## Delivered
 
-- Automatic filtering on accessible top-level HTTP(S) pages, with private-page, local/intranet, form and editor exclusions before analysis.
-- Bundled MobileNetV2 image inference with TensorFlow WASM; local caption rules. No account, API key, remote inference, Plus, billing, scheduling or per-site activation flow.
-- Reversible covers, persistent kept-post fingerprints, site/global pause and validated settings backup.
-- Actual model readiness and actionable failure status; current onboarding and privacy disclosures.
-- Recovered editable application modules, pinned dependencies, build, lockfile, CI and deterministic upload ZIP. Original Sites source was inaccessible; this is reconstructed source from the distribution, not an original project export.
-
-## Failure diagnosis
-
-The original 0.9.0 setup check returned `image_worker_failed` in an isolated Chromium profile. Direct worker diagnostics showed threaded WASM blob scripts failing `importScripts` under the release security policy. Disabling threaded WASM in a temporary diagnostic copy made the same bundled model succeed. The production worker now explicitly selects non-threaded WASM without relaxing the policy or introducing CPU/remote fallback.
+- Positive caption, image and sampled-video matches replace complete supported public posts, including captions, links and media. Standalone media retains sized replacement tiles. Every video in a replaced post pauses.
+- Twenty-four original bundled kitty/cardboard-revolution captions appear on photo replacements. Deterministic selection preserves photo credits and sourced wisdom.
+- Instagram caption/alt and Reddit title/body extraction improved. Hidden recycled posts, removed overlays and changed video streams restore/recheck correctly.
+- Lime kitty campaign art and keyboard-accessible three-pet game reveals in popup/onboarding. Portable Catch the Kitty: 15 seconds/eight catches, explicit start/pause/resume/restart/close, hidden-tab pause and reduced-motion stationary target. No game network, storage, rewards or extra permissions.
+- Existing local checks, privacy exclusions and reversible controls retained. No dependency, remote service, permission, CSP or web-accessible-resource expansion.
 
 ## Verification
 
-Seven unit tests pass. Four browser suites pass using clean profiles and the actual generated extension:
+Production build passed. Ten unit tests and all six browser suites passed with clean profiles and the actual built extension under Chrome for Testing 145.0.7632.6.
 
-- Fresh-install model execution, general-page filtering, benign image preservation, cookie/referrer-free retrieval, private routes, forms/editors, dynamic card editability, SPA transitions, reveal, saved correction and pause.
-- Missing WASM files produce an honest unavailable status; no remote fallback. Caption filtering and reveal still work.
-- Pause during slow DOM startup is respected. Four competing pages eventually receive image checks after queue pressure, including a placeholder followed by a real image.
-- Private navigation cancels pending and subsequent image retrieval, including navigation while model startup waits on storage.
-- Independent per-key startup reconciliation test prevents a correction event from discarding a refreshed pause setting.
+- Existing model startup, benign-image preservation, cookie/referrer-free fetch, private forms/editors/routes, SPA cancellation, settings/corrections, pause/reveal/keep and queue tests passed.
+- Missing-model failure remains honest and makes no remote fallback request.
+- Seventeen whole-post regressions passed, including image/video/text decisions, mixed-video pause, full caption/CTA hiding, standalone tiles, Instagram username with harmful alt, Reddit body, private/editor transitions, removed overlays, hidden recycled posts and changed streams.
+- Game suite passed keyboard scoring, timeout/eight-catch completion, restart, hidden/manual pause, close/reopen, reduced motion, bounds, 320px layout and actual extension popup game route.
+- Independent task reviews passed after fixing the Instagram username/alt regression. Whole-branch review is the final code gate before upload.
+- Cold/warm model setup checks: 316/43 ms on this machine. These are setup timing samples, not detection-accuracy measurements. Prior limited benign-image evaluation remains historical 0.10.0 evidence; this release makes no new accuracy claim.
 
-Independent adversarial review reproduced five defects plus cancellation/queue/reconciliation edge cases. All confirmed findings were fixed and rechecked; final verdict: ready to merge, no confirmed unresolved findings.
+The test-browser installer stalled extracting its complete official download; the same official archive was extracted with macOS's native archive utility. Tests then used the expected 145.0.7632.6 executable. No production code, security setting or browser profile was changed for that repair.
 
-## Limited performance and benign-image evidence
+## Package
 
-macOS ARM64 · test Chromium 145.0.7632.6 · 24 bundled, licensed photos: 12 cats and 12 nature scenes.
+`releases/NOOG-Chrome-Web-Store-0.11.0.zip` · 9,562,571 bytes. SHA-256: `268042c0e69b86c138aa08cf48029a2d9c5439f5b20930ff65d7a822568040e8`.
 
-- Cold inference: 277 ms.
-- Warm p50: 28 ms; p95: 31 ms.
-- False covers: 0/24 using default sensitivity.
-- Retained TensorFlow tensor bytes: 10,477,848 throughout evaluation.
+ZIP integrity passed; two consecutive packages are byte-for-byte identical. Version is 0.11.0. Manifest permissions, host access, CSP and web-accessible resources equal 0.10.0. Bundled game files match the website kit's per-file hashes. [Machine-readable verification](verification/0.11.0-package.json).
 
-The memory figure counts tensors, not total browser/worker RAM. This small dataset does not establish human-content classification accuracy, recall, live-site compatibility or performance on other hardware. Raw fixture results: `docs/verification/0.10.0-model-evaluation.json`.
+Immutable prior archives preserve release provenance. They are not active compatibility code.
 
-`npm audit` reports four moderate transitive warnings arising from TensorFlow's CLI argument formatting dependency. Build metadata confirms neither `argparse` nor `sprintf-js` is included in the shipped browser bundles. No safe patch is available from the package's currently published versions; downgrading TensorFlow would not be an appropriate fix.
+## Website and publication
 
-## Package provenance
+The current Store listing is live 0.10.0, verified October 16. Samuel approved the complete update and authorized the original **Develop NOOG Product** chat to update/publish the existing website. Launch brief and tested portable kit were delivered there; website publication and Store 0.11.0 status are recorded separately once observed.
 
-Original 0.9.0 ZIP remains unchanged:
-`d89428ddaec4663e6f1a4997d7b8f6956d25fcd9b56576e34969d26f87d6e819`.
+Existing project/domain/audience/subscriber data and approved film credits remain requirements. The game kit is `releases/NOOG-Kitty-Kit-0.11.0.zip`; checksum/provenance: `docs/store/KITTY-KIT-0.11.0.json`.
 
-Current upload ZIP: `releases/NOOG-Chrome-Web-Store-0.10.0.zip`.
-SHA-256: `954c41b83a0eca62d0891df0c1bc7df41b064b016ad3641c8475ffd3c2eaa0f1`.
-
-## Publication status
-
-The user completed the publisher non-trader declaration and manually uploaded the final 0.10.0 ZIP. The dashboard confirms version 0.10.0 and item ID `kfcbhdmmkipncdaajpbccefdkjjkihld`. Listing, required graphics, privacy fields and reviewer instructions are saved. Distribution is free, public and all regions. Publisher: **Symbai Studios**. Verified public contact: **hi@samu.quest**.
-
-The review submission was accepted on October 14, 2026. The dashboard shows **Pending review**, with automatic publication after approval selected. Google warned that broad host permissions can require an in-depth review. No live listing or approval date is claimed. See `docs/STORE-SUBMISSION.md`.
+Google controls review and publication timing. Do not describe 0.11.0 as Store-approved until the actual public listing changes.

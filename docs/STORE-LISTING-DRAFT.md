@@ -1,6 +1,6 @@
-# NOOG 0.10.0 store listing
+# NOOG 0.11.0 store listing
 
-Publication status: submitted for review on October 14, 2026. Item ID: `kfcbhdmmkipncdaajpbccefdkjjkihld`. Dashboard status: **Pending review**. Automatic publication after approval is enabled. This text describes the rebuilt free extension.
+Publication status: **0.10.0 is live**, verified October 16, 2026. This draft describes the 0.11.0 update; upload/review/publication status is recorded separately in `docs/STORE-SUBMISSION.md`. Item ID: `kfcbhdmmkipncdaajpbccefdkjjkihld`.
 
 **Title:** NOOG — Reverse the goon
 
@@ -8,7 +8,7 @@ Publication status: submitted for review on October 14, 2026. Item ID: `kfcbhdmm
 
 **Language:** English · **Category:** Productivity → Tools · **Distribution:** Free, public
 
-**Homepage:** https://github.com/starrybodies/noog
+**Homepage:** https://noog.symbai.studio/
 
 **Privacy policy:** https://github.com/starrybodies/noog/blob/main/docs/PRIVACY.md
 
@@ -30,7 +30,7 @@ Choose your filters:
 - Your own keywords and covered sites.
 - Creator exceptions and locally saved corrections for posts you want to keep.
 
-Swaps stay reversible. Show an item once, keep a post, pause a site or pause NOOG. Image matches cover the matched media slot while preserving the surrounding post. Caption matches can cover a whole supported card.
+Swaps stay reversible. Show an item once, keep a post, pause a site or pause NOOG. A positive caption, image or sampled-video match covers the entire supported public post, including captions, promotional links and media. Standalone images and videos keep sized covers. Photo replacements include original, bundled kitty nonsense.
 
 Known private apps, supported private-message routes, forms and editable content are skipped. Embedded frames and Chrome's protected pages are outside automatic coverage. Layout compatibility is best effort.
 
@@ -39,6 +39,8 @@ Images and readable sampled video frames are checked locally. NOOG does not uplo
 NOOG is experimental. It can miss unwanted content or cover wanted images. Media may appear before a check finishes; protected streams and some layouts may be unreadable. Unchecked media stays visible by default. Optional strict covers apply only to supported public feeds. Video sampling can miss content between frames. NOOG does not guarantee complete blocking.
 
 Desktop Chrome only. Free core filtering.
+
+The extension controls include a small local Catch the Kitty Easter egg. It makes no network requests, stores no scores and adds no permissions.
 
 ## Single purpose
 
@@ -53,7 +55,7 @@ Help users reduce exposure to self-selected unwanted web content by locally dete
 
 Executable JavaScript, WASM and model weights are packaged. No remotely hosted executable code, caption API, billing endpoint or telemetry endpoint is used.
 
-## Saved dashboard configuration
+## Historical 0.10.0 dashboard configuration
 
 The dashboard confirms package version 0.10.0. Description, English language, Tools category, homepage/support links, icon, filtering screenshot and small promo tile are saved. Distribution is free of charge, public and all regions. No in-app purchases are declared.
 

@@ -1,12 +1,12 @@
 {
   "name": "noog",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
     "test": "node --test tests/*.test.mjs",
-    "test:browser": "node tests/browser.mjs && node tests/browser-failure.mjs && node tests/browser-lifecycle.mjs && node tests/browser-init-race.mjs",
+    "test:browser": "node tests/browser.mjs && node tests/browser-failure.mjs && node tests/browser-lifecycle.mjs && node tests/browser-init-race.mjs && node tests/browser-whole-post.mjs && node tests/browser-kitty-game.mjs",
     "package": "npm run build && python3 scripts/package.py"
   },
   "dependencies": {

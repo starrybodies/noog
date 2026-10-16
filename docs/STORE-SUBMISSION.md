@@ -1,4 +1,16 @@
-# NOOG 0.10.0 Chrome Web Store submission
+# NOOG Chrome Web Store release status
+
+## Current status — October 16, 2026
+
+**0.10.0 is published and public**, verified on the Store listing and authenticated publisher dashboard. The original October 14 pending-review record below is historical.
+
+**0.11.0** is built/tested and ready for publisher submission. Upload ZIP: `releases/NOOG-Chrome-Web-Store-0.11.0.zip` (9,562,571 bytes), SHA-256 `268042c0e69b86c138aa08cf48029a2d9c5439f5b20930ff65d7a822568040e8`. Ten unit tests, six browser suites and deterministic ZIP/permission checks pass. Final upload/submission outcome will be recorded after the publisher action; no approval is claimed.
+
+Item ID remains `kfcbhdmmkipncdaajpbccefdkjjkihld`; publisher **Symbai Studios**, free/public/all regions. The new binary adds no permissions or remote service. [Public Store listing](https://chromewebstore.google.com/detail/noog/kfcbhdmmkipncdaajpbccefdkjjkihld).
+
+---
+
+# Historical NOOG 0.10.0 Chrome Web Store submission
 
 Submitted October 14, 2026. The final dashboard status is **Pending review**.
 
