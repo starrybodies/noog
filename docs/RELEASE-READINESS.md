@@ -33,7 +33,7 @@ Immutable prior archives preserve release provenance. They are not active compat
 
 ## Website and publication
 
-The current Store listing is live 0.10.0, verified October 16. Samuel approved the complete update and authorized the original **Develop NOOG Product** chat to update/publish the existing website. Launch brief and tested portable kit were delivered there; website publication is recorded separately once observed. The authenticated publisher dashboard confirms the 0.11.0 upload and accepted review submission; status is Pending review. See `docs/STORE-SUBMISSION.md`.
+The current Store listing is live 0.10.0, verified October 16. Samuel approved the complete update and authorized the original **Develop NOOG Product** chat to update/publish the existing website. The owner reports publishing version 22, and independent public Chrome checks confirm the refreshed hero, campaign kitties, Store CTA, mobile layout, hidden game, reduced motion and preserved film captions/credits. See [website publication evidence](verification/0.11.0-website-publication.md). The authenticated publisher dashboard confirms the 0.11.0 upload and accepted review submission; status is Pending review. See `docs/STORE-SUBMISSION.md`.
 
 Existing project/domain/audience/subscriber data and approved film credits remain requirements. The game kit is `releases/NOOG-Kitty-Kit-0.11.0.zip`; checksum/provenance: `docs/store/KITTY-KIT-0.11.0.json`.
 
