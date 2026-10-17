@@ -23,4 +23,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: noog-chrome-extension
-          path: releases/NOOG-Chrome-Web-Store-0.10.0.zip
+          path: releases/NOOG-Chrome-Web-Store-0.11.0.zip

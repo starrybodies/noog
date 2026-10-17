@@ -199,22 +199,33 @@ function createAdapter(document) {
     let k = isX ? n.querySelector('[data-testid="tweetText"]') : null,
       f =
         (isInstagram &&
-          (n.querySelector('h1,[data-testid="post-caption"]')?.textContent ||
+          [...new Set([
+            [...new Set(
+              [...n.querySelectorAll('h1,[data-testid="post-caption"],span[dir="auto"]')]
+                .map((B) => B.textContent?.trim())
+                .filter(Boolean),
+            )].join("\n") || n.textContent?.trim(),
             imagesIn(n)
               .find((B) => Math.max(B.width || 0, B.naturalWidth || 0) >= 120)
-              ?.getAttribute?.("alt") ||
-            n.getAttribute("alt"))) ||
+              ?.getAttribute?.("alt"),
+            n.getAttribute("alt"),
+          ].filter(Boolean))].join("\n")) ||
         "",
       A = (
         isX
           ? (k?.textContent ?? "")
           : isInstagram
             ? f
-            : n.getAttribute("post-title") ||
-              n.getAttribute("aria-label") ||
-              n.textContent?.trim() ||
-              n.getAttribute("alt") ||
-              ""
+            : adapterName === "Reddit"
+              ? [...new Set([
+                  n.getAttribute("post-title"),
+                  n.getAttribute("aria-label"),
+                  n.textContent?.trim(),
+                ].filter(Boolean))].join("\n")
+              : n.getAttribute("aria-label") ||
+                n.textContent?.trim() ||
+                n.getAttribute("alt") ||
+                ""
       )
         .trim()
         .slice(0, 1200),
@@ -489,6 +500,7 @@ function createPostCover(
     *{box-sizing:border-box}.card{display:flex;flex-direction:column;min-width:0;border:1px solid #38403b;border-radius:14px;overflow:hidden;background:#1b211e}
     :host([data-noog-tile]) .card{height:100%;border-radius:8px}
     .head{flex:none;padding:14px 16px}.head strong{display:block;font-size:14px;color:#cdf66b}.head span{display:block;font-size:11px;line-height:1.4;color:#a6b2aa;margin-top:4px;overflow-wrap:anywhere}
+    .photo-caption{flex:none;margin:0;padding:12px 16px;color:#e8f0dd;font:14px/1.45 Arial,sans-serif;overflow-wrap:anywhere;text-wrap:pretty}
     .visual{min-height:0}.photo{display:block;width:100%;height:190px;object-fit:cover;object-position:center}
     :host([data-noog-tile]) .visual{flex:1;overflow:hidden}:host([data-noog-tile]) .photo{height:100%}
     .wisdom{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;padding:26px 24px;text-align:center;background:radial-gradient(ellipse at top,#263025,#1b211e 80%)}
@@ -499,10 +511,11 @@ function createPostCover(
     button{border:1px solid #424d45;background:#252d27;border-radius:22px;color:#f2f6ef;padding:8px 12px;font:12px/1.2 Arial,sans-serif;cursor:pointer}
     button:focus-visible{outline:2px solid #cdf66b;outline-offset:2px}.secondary{background:none;border:0;padding:6px 0;color:#abb7ad}
     :host([data-noog-short]) .head{padding:8px 10px}:host([data-noog-short]) .head span{display:none}
+    :host([data-noog-short]) .photo-caption{padding:5px 10px;font-size:11px;line-height:1.3}
     :host([data-noog-short]) .wisdom{padding:8px 12px;gap:6px}:host([data-noog-short]) blockquote{font-size:15px;line-height:1.25}
     :host([data-noog-short]) .photo-credit,:host([data-noog-short]) .source,:host([data-noog-short]) .credit,:host([data-noog-short]) .secondary:not(.keep){display:none}:host([data-noog-short]) .actions{padding:5px 8px;gap:4px;flex-wrap:nowrap}
     :host([data-noog-short]) button{padding:5px 6px;font-size:10px}:host([data-noog-short]) .keep{font-size:0}:host([data-noog-short]) .keep::after{content:'Keep';font:10px/1.2 Arial,sans-serif}
-    :host([data-noog-short]) .keep[data-failed]::after{content:'Retry'}:host([data-noog-tiny]) .visual{display:none}:host([data-noog-tiny]) .actions{margin-top:auto}
+    :host([data-noog-short]) .keep[data-failed]::after{content:'Retry'}:host([data-noog-tiny]) .visual,:host([data-noog-tiny]) .photo-caption{display:none}:host([data-noog-tiny]) .actions{margin-top:auto}
     @container(max-width:320px){.head{padding:10px 12px}.head strong{font-size:12px}.head span{font-size:10px}.wisdom{padding:14px 14px;gap:10px}blockquote{font-size:18px;line-height:1.35}.actions{padding:8px 10px;gap:6px}.secondary{font-size:10px}}
     :host([data-noog-tiny]) .card{display:grid;grid-template-rows:minmax(0,1fr) 26px}
     :host([data-noog-tiny]) .head{padding:6px 8px;min-height:0;overflow:hidden}:host([data-noog-tiny]) .head strong{font:10px/1.2 Arial,sans-serif;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
@@ -545,6 +558,7 @@ function createPostCover(
       (p.decoding = "async"),
       n.append(p),
       w.append(n),
+      t.caption && w.append(h("p", t.caption, "photo-caption")),
       t.source)
     ) {
       let k = h("div", null, "photo-credit");
@@ -829,22 +843,19 @@ async function startContent({
       }
     },
     cover = (r, c, o) => {
-      let b = o.mediaMatches ? adapter.matchedMedia(r, o.mediaMatches) : [];
-      if (o.mediaMatches && !b.length) {
+      let N =
+          r.matches("img,video,canvas") ||
+          (!r.matches(FEED_CARDS + "," + GENERAL_CARDS) &&
+            adapter.mediaNodes(r).includes(r)),
+        b = N && o.mediaMatches ? adapter.matchedMedia(r, o.mediaMatches) : [];
+      if (N && o.mediaMatches && !b.length) {
         restore(c);
         return;
       }
-      let R = c.resume ?? [];
       restore(c, {
         resume: !1,
       });
-      let Y = adapter.videos(r);
-      ((c.coveredVideos = new Set(
-        o.mediaMatches
-          ? Y.filter((L) => b.includes(L) || b.some((T) => T.contains?.(L)))
-          : Y,
-      )),
-        resumeVideos(R.filter((L) => !c.coveredVideos.has(L.video))));
+      c.coveredVideos = new Set(adapter.videos(r));
       for (let L of c.coveredVideos) L.pause();
       let Q = () =>
           createPostCover(pageDocument, {
@@ -882,16 +893,10 @@ async function startContent({
                 throw Error("Save failed");
               c.fingerprint === L && ((c.shown = L), restore(c));
             },
-          }),
-        N =
-          r.matches("img,video,canvas") ||
-          (!r.matches(
-            'article,[role="article"],figure,shreddit-post,[data-testid="post-container"],.thing.link,ytd-rich-item-renderer,ytd-video-renderer,ytd-grid-video-renderer,ytd-reel-video-renderer,ytd-shorts-video-renderer',
-          ) &&
-            adapter.mediaNodes(r).includes(r));
+          });
       for (let L of b.length ? b : [r]) {
         let T = Q();
-        (o.mediaMatches || N
+        (N
           ? c.restoreFootprints.push(mediaCover.mount(L, T))
           : ((c.hidden = {
               node: r,
@@ -1101,6 +1106,8 @@ async function startContent({
       return;
     }
     siteCover.clear();
+    for (let o of posts.values())
+      o.overlay && !o.overlay.isConnected && (restore(o), (o.done = null));
     for (let [c, o] of posts)
       (!c.isConnected ||
         !adapter.eligible(c) ||
@@ -1172,13 +1179,15 @@ async function startContent({
       if (r.target?.matches?.("video")) {
         for (let [c, o] of posts)
           if (c === r.target || c.contains(r.target)) {
+            let changed =
+              r.type === "play" && readPost(c).fingerprint !== o.fingerprint;
             if (o.coveredVideos?.has(r.target) && r.type === "play") {
               r.target.pause();
-              return;
+              if (!changed) return;
             }
-            (r.type !== "play" ||
+            (changed || r.type !== "play" ||
               Date.now() - (o.lastVideoCheck ?? 0) >= 3e3) &&
-              (r.type !== "play" &&
+              ((changed || r.type !== "play") &&
                 (o.mediaRevision = (o.mediaRevision ?? 0) + 1),
               clearTimeout(o.retryTimer),
               (o.retryTimer = null),

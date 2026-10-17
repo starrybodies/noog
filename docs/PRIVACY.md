@@ -1,6 +1,6 @@
 # NOOG privacy policy
 
-NOOG 0.10.0 · October 14, 2026
+NOOG 0.11.0 · October 16, 2026
 
 ## Content processing
 
@@ -17,6 +17,10 @@ Known mail, document, chat and workspace apps, supported private-message routes,
 ## Local storage
 
 Preferences, custom keywords, domain pauses and creator exceptions stay in Chrome's local extension storage. Kept-post corrections store up to 200 SHA-256 fingerprints rather than original captions or media. Image results are cached in memory for up to five minutes and 128 entries. Temporary model-readiness metrics contain no page content. Removing NOOG clears its extension storage. Preferences can be exported or replaced through the toolbar.
+
+## Kitty replacements and game
+
+Replacement captions and mascot art are bundled. The optional local Catch the Kitty game makes no network requests, stores no score or play history, and needs no additional permission. It does not read page content or change filter preferences.
 
 ## Permissions
 

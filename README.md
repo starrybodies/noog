@@ -2,15 +2,19 @@
 
 NOOG is a free desktop Chrome extension that reversibly covers unwanted images and promotional captions with cats, nature, wisdom or quiet cards.
 
-Version **0.10.0** works automatically on accessible HTTP(S) pages. Pornographic-image checks and gambling-promotion rules start enabled. Image classification runs on the user's device with bundled model weights and WASM. Captions use local phrase rules. No account, API key, separate AI installation or hosted inference service is required.
+Version **0.11.0** works automatically on accessible HTTP(S) pages. Pornographic-image checks and gambling-promotion rules start enabled. Image classification runs on the user's device with bundled model weights and WASM. Captions use local phrase rules. No account, API key, separate AI installation or hosted inference service is required.
 
 Known private apps and supported private-message routes are excluded before analysis. Forms, editable regions and embedded frames are skipped. Unrecognized private websites can be paused in the toolbar. Chrome's protected pages remain inaccessible. Detection and layout coverage are imperfect; media remains visible when a check fails unless the user selects optional strict feed covers.
 
 ## Chrome Web Store status
 
-The [NOOG website](https://noog.symbai.studio/) is live as **Free alpha · 0.10.0**, with the approved launch film and a verified manual-install download. See [website publication and verification](docs/SITE-ALPHA-PUBLICATION.md).
+[Install NOOG free from the Chrome Web Store](https://chromewebstore.google.com/detail/noog/kfcbhdmmkipncdaajpbccefdkjjkihld). **0.10.0 is live**, verified October 16, 2026, published by **Symbai Studios**. Public contact: **hi@samu.quest**. [Launch evidence](docs/verification/2026-10-16-launch-status.md).
 
-NOOG 0.10.0 was submitted for review on October 14, 2026 under **Symbai Studios**, with verified public contact **hi@samu.quest**. Distribution is free, public and all regions. Automatic publication after approval is enabled. The dashboard shows **Pending review**; a live store listing is not yet claimed. See [submission record](docs/STORE-SUBMISSION.md).
+**0.11.0** introduces whole-post replacements: when a supported public post matches a caption, image or sampled-video check, its caption, promotional links and media are covered together. Photo replacements include bundled original kitty nonsense. Existing local phrase filters still govern caption detection; optional rage-bait and get-rich-quick filters remain opt-in. Standalone media keeps its sized cover. Show once, Keep post and pause controls restore originals.
+
+Lime kitty mascots and a small local Catch the Kitty Easter egg join the extension controls. The game uses no network, storage or extra permissions. The [website](https://noog.symbai.studio/) launch refresh uses the same portable game and established campaign cats.
+
+The tested 0.11.0 upload and publication status will be recorded in [release readiness](docs/RELEASE-READINESS.md). It must not be described as Store-approved until Google publishes it.
 
 ## Build and test
 
@@ -37,8 +41,8 @@ Browser tests use isolated profiles without personal browser data. They exercise
 | `public/` | Manifest, static pages, fonts, licensed photos and notices |
 | `scripts/` | Dependency-based build and deterministic ZIP packaging |
 | `tests/` | Behavior tests, real-browser integration and a limited benign-image evaluation |
-| `releases/NOOG-Chrome-Web-Store-0.10.0.zip` | Current Web Store upload package |
-| `releases/NOOG-Chrome-Web-Store-0.9.0.zip` | Immutable original release baseline |
+| `releases/NOOG-Chrome-Web-Store-0.11.0.zip` | Current Web Store upload package |
+| `releases/NOOG-Chrome-Web-Store-0.9.0.zip` and `0.10.0` | Immutable release provenance |
 | `docs/RELEASE-READINESS.md` | Verification evidence and remaining publication work |
 | `docs/PRIVACY.md` | Current extension privacy policy |
 

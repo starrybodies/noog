@@ -1,3 +1,4 @@
+@import url("assets/kitty-mascot.css");
 @font-face {
   font-family: Inter;
   src: url("assets/inter.woff2");
@@ -77,6 +78,8 @@ a {
   color: #b1bdb1;
   font-size: 16px;
 }
+.campaign-header .panel-subtitle { font-size: 13px; margin-bottom: 19px; }
+.campaign-header h1 { font-size: 35px; }
 .control-section {
   padding: 16px 0;
   border-top: 1px solid #39413a;

@@ -1058,6 +1058,33 @@ function seedHash(e) {
   for (let i of String(e)) t = Math.imul(t ^ i.charCodeAt(0), 16777619);
   return t >>> 0;
 }
+// Original NOOG captions: bundled text selected independently from photo credits.
+var KITTY_CAPTIONS = [
+  "The cat union has approved your break. The meeting is now a nap.",
+  "Global liberation begins when every kitty receives one extremely good box.",
+  "The cardboard revolution has entered its sitting phase.",
+  "Management is a kitten. All deadlines have been pushed off the desk.",
+  "The world's cats have agreed to share the sunbeam. Negotiations continue.",
+  "Our five-year plan is one box. We are already inside it.",
+  "The international kitty committee has nationalised this warm laptop.",
+  "All power to the paws. All paws currently under a blanket.",
+  "The cat union demands shorter meetings and taller scratching posts.",
+  "A better world is possible. This one needs more cardboard.",
+  "The revolution will be delivered in a box that is slightly too small.",
+  "This kitty has abolished the concept of being available after lunch.",
+  "Universal basic sunbeam has passed unanimously.",
+  "The cardboard assembly recognises your right to sit quietly.",
+  "We have seized the means of purring. Production remains voluntary.",
+  "Every border is open to the cat currently walking across your keyboard.",
+  "The kitty council has replaced quarterly targets with a bird outside.",
+  "Public ownership of the blanket. Private ownership of absolutely no worries.",
+  "The global cardboard commons welcomes another very small tenant.",
+  "The cats have formed a cooperative. Nobody has read the minutes.",
+  "The new world order is breakfast, windowsill, nap, second breakfast.",
+  "A tiny kitty has declared this patch of moss a public holiday.",
+  "The liberation committee is stuck in a paper bag. Morale is excellent.",
+  "No kitty left behind. Several kitties temporarily behind the sofa.",
+];
 var QUIET_STYLES = [
   "A little breathing room.",
   "Unclench your jaw.",
@@ -1086,6 +1113,9 @@ function chooseReplacement(e, t = "") {
   let s = PHOTO_CATALOG.filter(
     (a) => a.kind === (e === "nature" ? "nature" : "cats"),
   );
-  return s[i % s.length];
+  return {
+    ...s[i % s.length],
+    caption: KITTY_CAPTIONS[seedHash("caption:" + t) % KITTY_CAPTIONS.length],
+  };
 }
 export { chooseReplacement };

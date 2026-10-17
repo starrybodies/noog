@@ -1,0 +1,17 @@
+{
+  "version": "0.11.0",
+  "file": "NOOG-Chrome-Web-Store-0.11.0.zip",
+  "bytes": 9562571,
+  "sha256": "268042c0e69b86c138aa08cf48029a2d9c5439f5b20930ff65d7a822568040e8",
+  "deterministic": true,
+  "zip_integrity": "passed",
+  "permissions_unchanged": true,
+  "portable_game_hashes_match": true,
+  "unit_tests": 10,
+  "browser_suites": 6,
+  "whole_post_checks": 17,
+  "test_browser": "Google Chrome for Testing 145.0.7632.6",
+  "cold_model_ms": 316,
+  "warm_model_ms": 43,
+  "classifier_accuracy_newly_evaluated": false
+}

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "NOOG \u2014 Reverse the goon",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "minimum_chrome_version": "116",
   "description": "Reverse the goon. Filter pornographic images, gambling promotions and your custom triggers. Local image checks. Your choice.",
   "permissions": [

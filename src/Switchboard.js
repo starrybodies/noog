@@ -73,12 +73,14 @@ function Switchboard({
   onChange: onChange,
   status = "Changes saved",
   onClose: onClose,
+  onKittyGame,
   readiness = "Preparing image checks",
 }) {
   let [expanded, setExpanded] = (0, React.useState)(!1),
     [keywords, setKeywords] = (0, React.useState)(
       settings.literalTerms.join(", "),
     ),
+    [pets, setPets] = (0, React.useState)(0),
     [domains, setDomains] = (0, React.useState)(
       settings.blockedSites.join(", "),
     );
@@ -120,12 +122,42 @@ function Switchboard({
             }),
         ],
       }),
-      (0, jsxRuntime.jsxs)("h1", {
-        children: ["Reverse", (0, jsxRuntime.jsx)("br", {}), "the goon."],
+      (0, jsxRuntime.jsxs)("div", {
+        className: "campaign-header",
+        children: [
+          (0, jsxRuntime.jsxs)("div", {
+            children: [
+              (0, jsxRuntime.jsxs)("h1", {
+                children: ["Reverse", (0, jsxRuntime.jsx)("br", {}), "the goon."],
+              }),
+              (0, jsxRuntime.jsx)("p", {
+                className: "panel-subtitle",
+                children: "Less compulsion. More choice.",
+              }),
+            ],
+          }),
+          onKittyGame && (0, jsxRuntime.jsxs)("button", {
+            className: "kitty-mascot",
+            type: "button",
+            "data-pets": pets,
+            "aria-label": "Pet kitty three times for a game",
+            "aria-describedby": "kitty-secret",
+            onClick: () => setPets((count) => Math.min(3, count + 1)),
+            children: [
+              (0, jsxRuntime.jsx)("img", { src: "assets/reverse-sentinel-800.webp", width: 800, height: 533, alt: "" }),
+              (0, jsxRuntime.jsxs)("span", { className: "kitty-peek", "aria-hidden": true, children: [
+                (0, jsxRuntime.jsx)("img", { className: "awake", src: "assets/kitty-lime.svg", alt: "" }),
+                (0, jsxRuntime.jsx)("img", { className: "sleepy", src: "assets/kitty-sleepy.svg", alt: "" }),
+              ] }),
+            ],
+          }),
+        ],
       }),
-      (0, jsxRuntime.jsx)("p", {
-        className: "panel-subtitle",
-        children: "Less compulsion. More choice.",
+      onKittyGame && (0, jsxRuntime.jsx)("div", {
+        id: "kitty-secret", className: "kitty-secret", "aria-live": "polite",
+        children: pets >= 3
+          ? (0, jsxRuntime.jsx)("button", { type: "button", className: "text-button", onClick: onKittyGame, children: "Play kitty break" })
+          : pets > 0 ? `${3 - pets} more pets. A tiny break awaits.` : "",
       }),
       (0, jsxRuntime.jsxs)("section", {
         className: "control-section",
@@ -142,6 +174,7 @@ function Switchboard({
           }),
           (0, jsxRuntime.jsx)(FilterRow, {
             label: "Gambling promotions",
+            note: "Local promotional-phrase rules",
             checked: settings.gambling,
             onChange: (h) => setPreference("gambling", h),
             icon: DiceFiveIcon,
@@ -159,6 +192,10 @@ function Switchboard({
             checked: settings.hype,
             onChange: (h) => setPreference("hype", h),
             icon: TrendUpIcon,
+          }),
+          (0, jsxRuntime.jsx)("p", {
+            className: "hint",
+            children: "On supported public feeds, a caption, image or sampled-video match swaps the whole post. Phrase rules can miss context and unfamiliar wording.",
           }),
         ],
       }),

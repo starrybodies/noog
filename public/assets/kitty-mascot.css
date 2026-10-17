@@ -1,0 +1,21 @@
+.campaign-header { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+.campaign-header > div { min-width: 0; }
+.kitty-mascot { position: relative; flex: 0 0 43%; display: block; max-width: 220px; padding: 0; border: 0; border-radius: 12px; background: transparent; cursor: pointer; }
+.kitty-mascot > img { display: block; width: 100%; height: auto; }
+.kitty-mascot:focus-visible { outline: 2px solid #cdf66b; outline-offset: 4px; }
+.kitty-peek { position: absolute; bottom: 1px; right: 0; display: block; width: 34px; height: 32px; }
+.kitty-peek img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.kitty-peek .sleepy { opacity: 0; animation: kitty-blink 4s 2; }
+.kitty-peek .awake { animation: kitty-awake 4s 2; }
+.kitty-secret { margin: 0 0 14px; font-size: 12px; color: #b1bdb1; }
+.kitty-secret:empty { display: none; }
+.kitty-secret a { color: #cdf66b; text-decoration: underline; }
+.kitty-mascot[data-pets="1"] .kitty-peek { transform: translateY(-3px); }
+.kitty-mascot[data-pets="2"] .kitty-peek { transform: translateY(-6px) rotate(-8deg); }
+.kitty-mascot[data-pets="3"] .kitty-peek { transform: translateY(-6px) rotate(8deg); }
+@keyframes kitty-blink { 0%, 44%, 49%, 100% { opacity: 0; } 45%, 48% { opacity: 1; } }
+@keyframes kitty-awake { 0%, 44%, 49%, 100% { opacity: 1; } 45%, 48% { opacity: 0; } }
+.welcome-campaign { margin: 20px 0; }
+.welcome-campaign h1 { margin: 0; font-size: clamp(32px, 5vw, 49px); }
+.welcome-campaign .kitty-mascot { flex-basis: 39%; }
+@media (prefers-reduced-motion: reduce) { .kitty-peek .sleepy, .kitty-peek .awake { animation: none; } .kitty-mascot[data-pets] .kitty-peek { transform: none; } }

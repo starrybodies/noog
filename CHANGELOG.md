@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.11.0 — October 16, 2026
+
+- Replace complete matched public posts, including captions, promotional links and media, for caption, image and sampled-video matches. Keep sized covers for standalone media.
+- Add original bundled kitty-union and cardboard-revolution nonsense to photo replacements.
+- Improve Instagram caption and Reddit body coverage; retain reversible controls and private/editor exclusions.
+- Add lime kitty mascots, reduced-motion decoration and a small local keyboard-accessible Catch the Kitty Easter egg.
+- Celebrate the live Chrome Web Store listing and refresh the existing website hero and launch copy.
+
 ## 0.10.0 — October 14, 2026
 
 - Automatic filtering on accessible top-level HTTP(S) websites, without per-site setup.
